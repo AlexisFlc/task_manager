@@ -41,8 +41,17 @@ The GUI was created through the use of Java SceneBuilder with JavaFX. Used CSS s
 
 ## Screenshots
 
-![Start](README-images/sc1.png)
+> Screenshots of the application while it is running.
 
+![StartUp](README-images/sc1.png)
+![SignIn](README-images/sc2.png)
+![LogIn](README-images/sc3.png)
+![Home](README-images/sc4.png)
+![Tasks](README-images/sc5.png)
+![Input](README-images/sc6.png)
+![TasksWithInputs](README-images/sc7.png)
+![Calendar](README-images/sc8.png)
+![Journal](README-images/sc9.png)
 
 ---
 
