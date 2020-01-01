@@ -41,13 +41,14 @@ The GUI was created through the use of Java SceneBuilder with JavaFX. Used CSS s
 
 ## Screenshots
 
+![Start](README-images/sc1.png)
 
 
 ---
 
 ## Author Info
 
-- LinkedIn - [Charles Ezra Cabauatan](https://www.linkedin.com/in/charles-ezra-cabauatan-77baa6191/)
+- LinkedIn - [Charles Ezra Cabauatan](https://www.linkedin.com/in/  charles-ezra-cabauatan-77baa6191/)
 - Website - [charlesezra.github.io](https://charlesezra.github.io)
 - Twitter - [@yupocharlie](https://twitter.com/yupocharlie)
 
