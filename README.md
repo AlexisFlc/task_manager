@@ -1,33 +1,29 @@
 # Task Manager
-
-> A software application to organize tasks and events that are editable and unique for each user with a calendar implementation. It also has a journal feature where users can log their day.
+<blockquote>
+  A software application to organize tasks and events that are editable and unique for each user with a calendar implementation. It also has a journal feature  where users can log their day.
+</blockquote>
 
 #### Technologies: 
 
-- Java
-- JavaFX
-- CSS
-
----
+* Java
+* JavaFX
+* CSS
 
 ## Table of Contents
 
-- [How to Use](#how-to-use)
-- [Implementation](#implementation)
-- [Screenshots](#screenshots)
-- [Author Info](#author-info)
-
----
+* [How to Use](#how-to-use)
+* [Implementation](#implementation)
+* [Screenshots](#screenshots)
+* [Author Info](#author-info)
 
 ## How to Use
 
 Import the project into an IDE of your choice. Run and build the project with the ModernProject.java file. A graphical user interface of the application should appear. Before using its features, the user should sign in or log in. The interface is user-friendly, so it would not be hard to understand how to create tasks, events, or journal logs. 
 
----
-
 ## Implementation
-
-> Data Structures and Algorithms:
+<blockquote>
+  Data Structures and Algorithms:
+</blockquote>
 - Doubly Linked List
 - ADT Stack Implementation
 - Arrays and Loops
@@ -37,11 +33,10 @@ Import the project into an IDE of your choice. Run and build the project with th
 
 The GUI was created through the use of Java SceneBuilder with JavaFX. Used CSS stylesheets to create design and styling for the panels that make up the GUI of the application.
 
----
-
 ## Screenshots
-
-> Screenshots of the application while it is running.
+<blockquote>
+  Screenshots of the application while it is running.
+</blockquote>
 
 ![StartUp](README-images/sc1.png)
 ![SignIn](README-images/sc2.png)
@@ -53,7 +48,6 @@ The GUI was created through the use of Java SceneBuilder with JavaFX. Used CSS s
 ![Calendar](README-images/sc8.png)
 ![Journal](README-images/sc9.png)
 
----
 
 ## Author Info
 
