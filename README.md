@@ -3,7 +3,7 @@
   A software application to organize tasks and events that are editable and unique for each user with a calendar implementation. It also has a journal feature  where users can log their day.
 </blockquote>
 
-#### Technologies: 
+## Technologies: 
 
 * Java
 * JavaFX
@@ -21,39 +21,34 @@
 Import the project into an IDE of your choice. Run and build the project with the ModernProject.java file. A graphical user interface of the application should appear. Before using its features, the user should sign in or log in. The interface is user-friendly, so it would not be hard to understand how to create tasks, events, or journal logs. 
 
 ## Implementation
-<blockquote>
-  Data Structures and Algorithms:
-</blockquote>
-- Doubly Linked List
-- ADT Stack Implementation
-- Arrays and Loops
-- Graphical User Interface
-- Binary Search Algorithm
-- File Input / Output
+Data Structures and Algorithms:
+* Doubly Linked List
+* ADT Stack Implementation
+* Arrays and Loops
+* Graphical User Interface
+* Binary Search Algorithm
+* File Input / Output
 
 The GUI was created through the use of Java SceneBuilder with JavaFX. Used CSS stylesheets to create design and styling for the panels that make up the GUI of the application.
 
 ## Screenshots
-<blockquote>
-  Screenshots of the application while it is running.
-</blockquote>
+Screenshots of the application while it is running.
 
-![StartUp](README-images/sc1.png)
-![SignIn](README-images/sc2.png)
-![LogIn](README-images/sc3.png)
-![Home](README-images/sc4.png)
-![Tasks](README-images/sc5.png)
-![Input](README-images/sc6.png)
-![TasksWithInputs](README-images/sc7.png)
-![Calendar](README-images/sc8.png)
-![Journal](README-images/sc9.png)
-
+[<img align="left" alt="StartUp" width="26px" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc1.png?raw=true" />][StartUp]
+[<img align="left" alt="SignIn" width="26px" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc2.png?raw=true" />][SignIn]
+[<img align="left" alt="LogIn" width="26px" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc3.png?raw=true" />][LogIn]
+[<img align="left" alt="Home" width="26px" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc4.png?raw=true" />][Home]
+[<img align="left" alt="Tasks" width="26px" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc5.png?raw=true" />][Tasks]
+[<img align="left" alt="Input" width="26px" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc6.png?raw=true" />][Input]
+[<img align="left" alt="TasksWithInput" width="26px" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc7.png?raw=true" />][TasksWithInput]
+[<img align="left" alt="Calendar" width="26px" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc8.png?raw=true" />][Calendar]
+[<img align="left" alt="Journal" width="26px" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc9.png?raw=true" />][Journal]
 
 ## Author Info
 
-- LinkedIn - [Charles Ezra Cabauatan](https://www.linkedin.com/in/charlesezra/)
-- Website - [charlesezra.github.io](https://charlesezra.github.io)
-- Twitter - [@yupocharlie](https://twitter.com/yupocharlie)
+* LinkedIn - [Charles Ezra Cabauatan](https://www.linkedin.com/in/charlesezra/)
+* Website - [charlesezra.github.io](https://charlesezra.github.io)
+* Twitter - [@yupocharlie](https://twitter.com/yupocharlie)
 
 
 [Back To The Top](#Task-Manager)
