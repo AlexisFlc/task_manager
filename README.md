@@ -34,15 +34,15 @@ The GUI was created through the use of Java SceneBuilder with JavaFX. Used CSS s
 ## Screenshots
 Screenshots of the application while it is running.
 
-[<img align="left" alt="StartUp" width="26px" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc1.png?raw=true" />][StartUp]
-[<img align="left" alt="SignIn" width="26px" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc2.png?raw=true" />][SignIn]
-[<img align="left" alt="LogIn" width="26px" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc3.png?raw=true" />][LogIn]
-[<img align="left" alt="Home" width="26px" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc4.png?raw=true" />][Home]
-[<img align="left" alt="Tasks" width="26px" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc5.png?raw=true" />][Tasks]
-[<img align="left" alt="Input" width="26px" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc6.png?raw=true" />][Input]
-[<img align="left" alt="TasksWithInput" width="26px" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc7.png?raw=true" />][TasksWithInput]
-[<img align="left" alt="Calendar" width="26px" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc8.png?raw=true" />][Calendar]
-[<img align="left" alt="Journal" width="26px" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc9.png?raw=true" />][Journal]
+[<img align="left" alt="StartUp" width="100%" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc1.png?raw=true" />]
+[<img align="left" alt="SignIn" width="100%" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc2.png?raw=true" />]
+[<img align="left" alt="LogIn" width="100%" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc3.png?raw=true" />]
+[<img align="left" alt="Home" width="100%" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc4.png?raw=true" />]
+[<img align="left" alt="Tasks" width="100%" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc5.png?raw=true" />]
+[<img align="left" alt="Input" width="100%" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc6.png?raw=true" />]
+[<img align="left" alt="TasksWithInput" width="100%" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc7.png?raw=true" />]
+[<img align="left" alt="Calendar" width="100%" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc8.png?raw=true" />]
+[<img align="left" alt="Journal" width="100%" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc9.png?raw=true" />]
 
 ## Author Info
 
