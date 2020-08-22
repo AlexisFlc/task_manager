@@ -1,4 +1,4 @@
-## Task Manager 
+## Task Manager
 
 A software application to organize tasks and events that are editable and unique for each user with a calendar implementation. It also has a journal feature  where users can log their day.
 
@@ -12,15 +12,6 @@ A software application to organize tasks and events that are editable and unique
 
 ---
 
-## Table of Contents
-
-* [How to Use](#how-to-use)
-* [Implementation](#implementation)
-* [Screenshots](#screenshots)
-* [Author Info](#author-info)
-
----
-
 ## How to Use
 
 Import the project into an IDE of your choice. Run and build the project with the ModernProject.java file. A graphical user interface of the application should appear. Before using its features, the user should sign in or log in. The interface is user-friendly, so it would not be hard to understand how to create tasks, events, or journal logs. 
@@ -29,6 +20,7 @@ Import the project into an IDE of your choice. Run and build the project with th
 
 ## Implementation
 Data Structures and Algorithms:
+
 * Doubly Linked List
 * ADT Stack Implementation
 * Arrays and Loops
@@ -70,15 +62,10 @@ Screenshots of the application while it is running.
 #### Journal Page:
 <img align="left" alt="Journal" width="100%" src="https://github.com/charlesezra/Task-Manager/blob/master/README-images/sc9.png?raw=true" />
 
----
-
 ## Author Info
 
 * LinkedIn - [Charles Ezra Cabauatan](https://www.linkedin.com/in/charlesezra/)
 * Website - [charlesezra.github.io](https://charlesezra.github.io)
 * Twitter - [@yupocharlie](https://twitter.com/yupocharlie)
-
-
-[Back To The Top](#Task-Manager)
 
 ---
