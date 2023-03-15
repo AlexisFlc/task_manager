@@ -229,33 +229,11 @@ public class LinkedList<T extends Comparable<T>> {
             return;
         while(!ptr.sentinel){
             Node<T> current = ptr, temp = current.next;
-            if(temp.sentinel)
-                break;
-            int c1 = convertDate((Tasks) current.data), c2 = convertDate((Tasks) temp.data);
-            if(c1 > c2){
-                current.prev.setNext(temp);
-                temp.setPrev(current.prev);
-                current.setPrev(temp);
-                current.setNext(temp.next);
-                temp.setNext(current);
-                current.next.setPrev(current);
-            }else{
-                ptr = ptr.next;
-            }
+
         }
     }
 
-    private int convertDate(Tasks o){
-        BuildCalendar cal = new BuildCalendar();
-        Scanner read = new Scanner(o.getDueDate());
-        read.next();
-        int month = cal.monthConverter(read.next()) + 1;
-        StringBuilder sb = new StringBuilder(read.next());
-        sb.deleteCharAt(2);
-        read.close();
-        String combine = month + sb.toString() + read.next();
-        return Integer.parseInt(combine);
-    }
+
 
     //Node Class for the Linked List Class
     private class Node<E>{

@@ -78,40 +78,7 @@
                   </Button>
                </children>
             </HBox>
-            <HBox layoutX="211.0" layoutY="11.0" prefHeight="100.0" prefWidth="249.75" styleClass="btns">
-               <children>
-                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/Calendar.png" />
-                     </image>
-                     <HBox.margin>
-                        <Insets left="25.0" top="13.0" />
-                     </HBox.margin>
-                  </ImageView>
-                  <Button fx:id="calendarButton" mnemonicParsing="false" onAction="#calendarButtonAction" prefHeight="46.0" prefWidth="211.0" style="-fx-background-color: transparent;" text="Calendar" textFill="#1000c7">
-                     <font>
-                        <Font name="EE-Alturas" size="20.0" />
-                     </font>
-                  </Button>
-               </children>
-            </HBox>
-            <HBox layoutX="611.0" layoutY="11.0" prefHeight="100.0" prefWidth="249.75" styleClass="btns">
-               <children>
-                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/Journal.png" />
-                     </image>
-                     <HBox.margin>
-                        <Insets left="25.0" top="13.0" />
-                     </HBox.margin>
-                  </ImageView>
-                  <Button fx:id="journalButton" mnemonicParsing="false" onAction="#journalButtonAction" prefHeight="46.0" prefWidth="218.0" style="-fx-background-color: transparent;" text="Journal" textFill="#1000c7">
-                     <font>
-                        <Font name="EE-Alturas" size="20.0" />
-                     </font>
-                  </Button>
-               </children>
-            </HBox>
+
          </children>
       </HBox>
       <VBox layoutY="74.0" prefHeight="48.0" prefWidth="14.0">

@@ -7,12 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bb7d0aa-b7dd-403b-acd9-a49914b481af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modernproject/MysqlCon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/BuildCalendar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/CalendarSceneUI.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/CalendarSceneUIController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/HomeControlSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/HomeControlSceneUI.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/HomeSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/HomeSceneUI.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/JournalSceneUI.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/JournalSceneUIController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/TaskSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/TaskSceneUI.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,6 +154,14 @@
       <option name="presentableId" value="Default" />
       <updated>1545953017561</updated>
     </task>
+    <task id="LOCAL-00001" summary="creation de mysqlcon">
+      <created>1678895235111</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678895235111</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -223,6 +235,10 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="creation de mysqlcon" />
+    <option name="LAST_COMMIT_MESSAGE" value="creation de mysqlcon" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/images/CALENDAR.PNG">
