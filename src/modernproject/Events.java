@@ -9,6 +9,11 @@ public class Events implements Comparable<Events>{
         eDate = dataArr[1];
     }
 
+    public Events(String name, String date) {
+        eName = name;
+        eDate = date;
+    }
+
     public String getEventName(){
         return eName;
     }
