@@ -3,6 +3,7 @@ package modernproject;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -56,7 +57,7 @@ public class SignUpSceneUIController implements Initializable {
         }
     }
     
-    @FXML private void signButtonAction(ActionEvent event) throws IOException, ClassNotFoundException {
+    @FXML private void signButtonAction(ActionEvent event) throws IOException, ClassNotFoundException, SQLException {
         String signUpArray[] = {fnText.getText(), lnText.getText(), userText.getText(), passText.getText(), confirmText.getText()};
         ErrorHandle error = new ErrorHandle();
         boolean noError = error.checkSignUp(signUpArray);

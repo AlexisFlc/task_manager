@@ -7,6 +7,7 @@ package modernproject;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -41,7 +42,7 @@ public class LoginSceneUIController implements Initializable {
         homeControlWindow.setTitle("Task Manager");
     }
     
-    @FXML private void loginButtonAction(ActionEvent event) throws IOException, ClassNotFoundException {
+    @FXML private void loginButtonAction(ActionEvent event) throws IOException, ClassNotFoundException, SQLException {
         Alert alert = new Alert(Alert.AlertType.ERROR);
     	if(!(userNameField.getText().equals("") && passwordField.getText().equals(""))){
             UserInfo userFound = UserAction.readUserData(userNameField.getText());
