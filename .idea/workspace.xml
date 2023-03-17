@@ -6,18 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bb7d0aa-b7dd-403b-acd9-a49914b481af" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModernProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ModernProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/modernproject/BuildCalendar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/modernproject/CalendarSceneUI.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/modernproject/CalendarSceneUIController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/modernproject/JournalSceneUI.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/modernproject/JournalSceneUIController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/modernproject/LoginSceneUIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/LoginSceneUIController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/modernproject/SignUpSceneUIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/SignUpSceneUIController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/modernproject/UserAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/UserAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modernproject/MysqlConSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/MysqlConSingleton.java" afterDir="false" />
+    <list default="true" id="2bb7d0aa-b7dd-403b-acd9-a49914b481af" name="Default Changelist" comment="creation de mysqlcon">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_03_2023_14_16__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_03_2023_14_16__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/MysqlConSingleton.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/MysqlConSingleton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/UserAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/UserAction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +111,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "V:/INFO-NEV/BUT-INFO-NEV-2-CDV_APP/jd594217/Semestre 4/SAE/mysql-connector-java-8.0.25.jar",
+    "last_opened_file_path": "C:/Users/mj396287/OneDrive - Université de Bourgogne/A2/S4/SAE/task_manager",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
