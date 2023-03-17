@@ -5,16 +5,19 @@
       <artifact name="TaskManager" />
     </artifacts-to-build>
   </component>
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bb7d0aa-b7dd-403b-acd9-a49914b481af" name="Default Changelist" comment="pdo Signleton">
+    <list default="true" id="2bb7d0aa-b7dd-403b-acd9-a49914b481af" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modernproject/LoginSceneUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/LoginSceneUIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModernProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ModernProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/BuildCalendar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/CalendarSceneUI.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/CalendarSceneUIController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/JournalSceneUI.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/JournalSceneUIController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/LoginSceneUIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/LoginSceneUIController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/SignUpSceneUIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/SignUpSceneUIController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/UserAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/UserAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modernproject/MysqlConSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/MysqlConSingleton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modernproject/SignUpSceneUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/SignUpSceneUIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modernproject/UserAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/UserAction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +47,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -114,17 +118,29 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "V:/INFO-NEV/BUT-INFO-NEV-2-CDV_APP/jd594217/Semestre 4/SAE/mysql-connector-java-8.0.25.jar",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="modernproject.ModernProject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.ModernProject">
+    <configuration name="ModernProject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="modernproject.ModernProject" />
+      <module name="ModernProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modernproject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MysqlCon" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="modernproject.MysqlCon" />
       <module name="ModernProject" />
       <extension name="coverage">
         <pattern>
@@ -138,7 +154,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.modernproject.ModernProject" />
+        <item itemvalue="Application.ModernProject" />
+        <item itemvalue="Application.MysqlCon" />
       </list>
     </recent_temporary>
   </component>
@@ -161,14 +178,7 @@
       <option name="project" value="LOCAL" />
       <updated>1678895235111</updated>
     </task>
-    <task id="LOCAL-00002" summary="pdo Signleton">
-      <created>1679040154087</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1679040154087</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -256,8 +266,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="creation de mysqlcon" />
-    <MESSAGE value="pdo Signleton" />
-    <option name="LAST_COMMIT_MESSAGE" value="pdo Signleton" />
+    <option name="LAST_COMMIT_MESSAGE" value="creation de mysqlcon" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/images/CALENDAR.PNG">

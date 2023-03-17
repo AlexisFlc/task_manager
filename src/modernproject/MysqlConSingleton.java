@@ -38,14 +38,13 @@ public class MysqlConSingleton {
     }
 
 
-
     public UserInfo getUserInfo(String username) throws SQLException {
         PreparedStatement stmt = con.prepareStatement("select * from users where username = ?");
         stmt.setString(1, username);
         ResultSet rs = stmt.executeQuery();
         if (rs.next()) {
-            String name = rs.getString("name");
-            String firstName = rs.getString("firstName");
+            String name = rs.getString("last_name");
+            String firstName = rs.getString("first_name");
             String password = rs.getString("password");
             String usernamee = rs.getString("username");
             UserInfo user = new UserInfo(name, firstName, usernamee, password);
@@ -55,7 +54,8 @@ public class MysqlConSingleton {
     }
 
     public void addUser(UserInfo user) throws SQLException {
-        PreparedStatement stmt = con.prepareStatement("insert into users (name, firstName, password, username) values (?, ?, ?, ?)");
+        PreparedStatement stmt = con.prepareStatement("insert into users (last_name, first_name, password, username) values (?, ?, ?, ?)");
+        System.out.println(user.getUserName()+ user.getFirstName()+user.getLastName()+ user.getPassword());
         stmt.setString(1, user.getFirstName());
         stmt.setString(2, user.getLastName());
         stmt.setString(3, user.getPassword());
