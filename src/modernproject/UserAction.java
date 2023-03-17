@@ -36,7 +36,8 @@ public class UserAction {
 			String firstName = rs.getString("first_name");
 			String password = rs.getString("password");
 			String usernamee = rs.getString("username");
-			UserInfo user = new UserInfo(name, firstName, usernamee, password);
+			int id = rs.getInt("id");
+			UserInfo user = new UserInfo(name, firstName, usernamee, password, id);
 			return user;
 		}
 		return null;

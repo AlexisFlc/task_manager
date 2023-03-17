@@ -2,6 +2,7 @@ package modernproject;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -13,7 +14,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import modernproject.services.TaskServices;
+
 import java.time.LocalDate;
+
+import static modernproject.ModernProject.signedUser;
 
 public class TaskInputSceneUIController implements Initializable {
 	@FXML private TextField taskInput;
@@ -28,7 +33,7 @@ public class TaskInputSceneUIController implements Initializable {
 		//TO-DO
 	}
 	
-	@FXML private void doneBtnAction(ActionEvent event) throws IOException {
+	@FXML private void doneBtnAction(ActionEvent event) throws IOException, SQLException {
 		LocalDate localDate = dateInput.getValue();
 		DateTimeFormatter date = DateTimeFormatter.ofPattern("EEEE MMMM dd, yyyy");
 		String dataArr[] = {taskInput.getText(), date.format(localDate), typeInput.getText(), descInput.getText()};
@@ -36,9 +41,10 @@ public class TaskInputSceneUIController implements Initializable {
 		boolean noError = error.checkInputs(dataArr);
 
 		if(!noError){
+			TaskServices taskServices = new TaskServices();
 			Tasks task = new Tasks(dataArr);
-			boolean checkDuplicate = ModernProject.taskLL.insert(task);
-			if(!checkDuplicate) {
+
+			if(taskServices.checkIfTaskExists(task.getTaskName(), signedUser.getFirstName())) {
 				Alert alert = new Alert(Alert.AlertType.ERROR);
 				alert.setHeaderText("No Duplicate Tasks");
 				alert.setContentText("Please Input a Different Task Name as you have already inputted this task before!");

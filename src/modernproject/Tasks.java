@@ -11,6 +11,7 @@ public class Tasks implements Comparable<Tasks> {
     private String date;
     private String type;
     private String desc;
+    private String status;
 
     public Tasks(String dataArr[]) {
         this.taskN = dataArr[0];
@@ -50,6 +51,23 @@ public class Tasks implements Comparable<Tasks> {
     public void setDesc(String nDesc) {
         desc = nDesc;
     }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
 
     public String[] transferEditToFile(TextArea taskSelectedArea) throws IOException {
         File editFile = new File(ModernProject.directory, "ScannedEditFile.txt");
