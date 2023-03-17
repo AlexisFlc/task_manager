@@ -20,6 +20,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import modernproject.services.TaskServices;
+
 import java.io.File;
 
 public class LoginSceneUIController implements Initializable {
@@ -48,11 +50,12 @@ public class LoginSceneUIController implements Initializable {
             UserInfo userFound = UserAction.readUserData(userNameField.getText());
             if(!(userFound == null)) {
                 if(userFound.getUserName().equals(userNameField.getText()) && userFound.getPassword().equals(passwordField.getText())) {
+                    TaskServices o = new TaskServices();
                     ModernProject.setSignedUser(userFound);
                     File userDir = new File(ModernProject.directory, userFound.getUserName());
                     ModernProject.updateDir(userDir);
-                    ModernProject.taskLL.fileToList("taskList.txt");
-                    ModernProject.completedLL.fileToList("completedList.txt");
+                    ModernProject.taskLL = o.getAllNotDone();
+                    ModernProject.completedLL = o.getAllCompleted();
                     ModernProject.eventsLL.fileToList("eventList.txt");
                     ModernProject.journalLL.fileToList();
 

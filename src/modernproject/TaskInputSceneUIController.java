@@ -43,6 +43,7 @@ public class TaskInputSceneUIController implements Initializable {
 		if(!noError){
 			TaskServices taskServices = new TaskServices();
 			Tasks task = new Tasks(dataArr);
+			task.setStatus("Not Done");
 
 			if(taskServices.checkIfTaskExists(task.getTaskName(), signedUser.getFirstName())) {
 				Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -50,10 +51,11 @@ public class TaskInputSceneUIController implements Initializable {
 				alert.setContentText("Please Input a Different Task Name as you have already inputted this task before!");
 				alert.showAndWait();
 			}else {
-				ModernProject.taskLL.listToFile("taskList.txt");
+				taskServices.addTask(task);
 				Parent taskParent = FXMLLoader.load(getClass().getResource("TaskSceneUI.fxml"));
 				Scene taskScene = new Scene(taskParent);
-				Stage taskWindow = (Stage)((Node)event.getSource()).getScene().getWindow();
+				Stage taskWindow = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
 				taskWindow.setScene(taskScene);
 				taskWindow.show();
 				taskWindow.setResizable(false);
