@@ -2,6 +2,7 @@ package modernproject;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.ResourceBundle;
 
@@ -19,6 +20,8 @@ import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import javafx.scene.control.Label;
+import modernproject.services.EventService;
+
 import java.text.DecimalFormat;
 
 import static modernproject.ModernProject.*;
@@ -35,6 +38,8 @@ public class HomeSceneUIController implements Initializable{
     @FXML private ListView<String> deadlineList;
     private int minute, hour, second;
     private int cmonth, cday, cyear;
+
+    public EventService eventService = new EventService();
     
     @Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -62,18 +67,25 @@ public class HomeSceneUIController implements Initializable{
             //Ignore
         }
         sortedLL.sort();
-        loadData();
-	}
+        try {
+            loadData();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
-	private void loadData(){
+	private void loadData() throws SQLException {
         ntNumLabel.setText(String.format("%03d%n", ModernProject.taskLL.getSize()));
         ctNumLabel.setText(String.format("%03d%n", ModernProject.completedLL.getSize()));
-        eNumLabel.setText(String.format("%03d%n", ModernProject.eventsLL.getSize()));
+        eNumLabel.setText(String.format("%03d%n", eventService.getAllEvents().size()));
 
         DecimalFormat dFormat = new DecimalFormat("00.00");
         double pp = ((double)completedLL.getSize() / (double)taskLL.getSize()) * 100;
         ppNumLabel.setText(dFormat.format(pp) + "%");
-        String[] taskName = sortedLL.displayNodes(false);
+        String[] taskName = new String[eventService.getAllEvents().size()];
+        for(int i = 0; i < eventService.getAllEvents().size(); i++) {
+        	taskName[i] = eventService.getAllEvents().get(i).getEventName();
+        }
         deadlineList.getItems().addAll(taskName);
     }
 

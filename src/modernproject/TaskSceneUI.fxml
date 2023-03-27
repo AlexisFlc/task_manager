@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1024.0" stylesheets="@ModernStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modernproject.TaskSceneUIController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1024.0" stylesheets="@ModernStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modernproject.TaskSceneUIController">
    <children>
       <HBox prefHeight="75.0" prefWidth="1025.0">
          <children>
@@ -38,7 +35,7 @@
             <String fx:value="container-border" />
          </styleClass>
       </HBox>
-      <HBox layoutX="13.0" layoutY="74.0" prefHeight="48.0" prefWidth="999.0">
+      <HBox alignment="TOP_CENTER" layoutX="13.0" layoutY="74.0" prefHeight="48.0" prefWidth="999.0">
          <styleClass>
             <String fx:value="container-border" />
             <String fx:value="sidebar" />

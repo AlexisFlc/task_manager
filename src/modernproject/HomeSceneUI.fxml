@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.image.*?>
 <?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="606.0" prefWidth="1025.0" styleClass="parent" stylesheets="@ModernStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modernproject.HomeSceneUIController">
+<AnchorPane id="AnchorPane" prefHeight="606.0" prefWidth="1025.0" styleClass="parent" stylesheets="@ModernStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modernproject.HomeSceneUIController">
    <children>
       <HBox prefHeight="74.0" prefWidth="1026.0" stylesheets="@ModernStyle.css">
          <styleClass>
@@ -47,13 +43,13 @@
             <String fx:value="sidebar" />
          </styleClass>
       </VBox>
-      <HBox layoutX="13.0" layoutY="73.0" prefHeight="48.0" prefWidth="998.0">
+      <HBox alignment="TOP_CENTER" layoutX="13.0" layoutY="73.0" prefHeight="48.0" prefWidth="998.0">
          <styleClass>
             <String fx:value="sidebar" />
             <String fx:value="container-border" />
          </styleClass>
          <children>
-            <HBox prefHeight="100.0" prefWidth="249.5" styleClass="btns">
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="249.5" styleClass="btns">
                <children>
                   <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -70,7 +66,7 @@
                   </Button>
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="249.5" styleClass="btns">
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="249.5" styleClass="btns">
                <children>
                   <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -80,7 +76,7 @@
                         <Insets left="25.0" top="13.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Button fx:id="taskButton" mnemonicParsing="false" onAction="#taskButtonAction" prefHeight="46.0" prefWidth="227.0" style="-fx-background-color: transparent;" text="Tasks" textFill="#1000c7">
+                  <Button fx:id="taskButton" mnemonicParsing="false" onAction="#taskButtonAction" prefHeight="46.0" prefWidth="227.0" style="-fx-background-color: transparent;" text="Tasks" textAlignment="RIGHT" textFill="#1000c7">
                      <font>
                         <Font name="EE-Alturas" size="20.0" />
                      </font>

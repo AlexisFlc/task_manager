@@ -2,6 +2,9 @@ package modernproject;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
+import java.util.Arrays;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,8 +16,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import modernproject.services.EventService;
+
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDate;
+
+import static modernproject.ModernProject.signedUser;
 
 public class TaskSceneUIController implements Initializable {
     @FXML private TextField searchField;
@@ -26,9 +33,15 @@ public class TaskSceneUIController implements Initializable {
     @FXML private TextArea taskSelectedArea;
     private String[] taskName;
 
+    public EventService eventService = new EventService();
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        loadData();
+        try {
+            loadData();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         taskSelectedArea.setText("Nothing is Selected");
     }
 
@@ -44,7 +57,7 @@ public class TaskSceneUIController implements Initializable {
     }
     
     @FXML private void homeButtonAction(ActionEvent event) throws IOException {
-    	if(ModernProject.signedUser != null) {
+    	if(signedUser != null) {
     		Parent homeParent = FXMLLoader.load(getClass().getResource("HomeSceneUI.fxml"));
             Scene homeScene = new Scene(homeParent);
             Stage homeWindow = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -178,16 +191,19 @@ public class TaskSceneUIController implements Initializable {
         dateField.setText(date.format(localDate));
     }
 
-    @FXML private void createBtnAction(ActionEvent event) throws IOException, NullPointerException {
+    @FXML private void createBtnAction(ActionEvent event) throws IOException, NullPointerException, SQLException {
         String[] eventData = new String[2];
         LocalDate localDate = dateText.getValue();
         DateTimeFormatter date = DateTimeFormatter.ofPattern("EEEE MMMM dd, yyyy");
         eventData[0] = nameText.getText();
         eventData[1] = date.format(localDate);
         if(!(eventData[0].isEmpty() || eventData[1].isEmpty())) {
+
+
             Events o = new Events(eventData);
-            ModernProject.eventsLL.insert(o);
-            ModernProject.eventsLL.listToFile("eventList.txt");
+            if (!eventService.checkIfEventExist(o.getEventName(), signedUser.getFirstName())){
+                eventService.addEvent(o.getEventName(), o.getEventDate(), "Incomplete");
+            }
 
             Parent taskParent = FXMLLoader.load(getClass().getResource("TaskSceneUI.fxml"));
             Scene taskScene = new Scene(taskParent);
@@ -199,12 +215,16 @@ public class TaskSceneUIController implements Initializable {
         }
     }
 
-    @FXML private void deleteEventBtnAction(ActionEvent event) throws IOException{
+    @FXML private void deleteEventBtnAction(ActionEvent event) throws IOException, SQLException {
         String[] selected = eventListView.getSelectionModel().getSelectedItem().split(" on ", 2);
+        System.out.println(Arrays.toString(selected));
         if(!(selected[0] == null || selected[0].isEmpty())) {
-            Events o = ModernProject.eventsLL.findNode(selected[0]);
-            ModernProject.eventsLL.removeNode(o);
-            ModernProject.eventsLL.listToFile("eventList.txt");
+            Events o = new Events(selected[0], selected[1]);
+            System.out.println(o.toString());
+            if (o == null){
+                System.out.println("Event not found");
+            }
+            eventService.deleteEvent(o.getEventName(), signedUser.getId());
 
             Parent taskParent = FXMLLoader.load(getClass().getResource("TaskSceneUI.fxml"));
             Scene taskScene = new Scene(taskParent);
@@ -237,10 +257,15 @@ public class TaskSceneUIController implements Initializable {
         return -1;
     }
 
-    private void loadData() {
+    private void loadData() throws SQLException {
         taskName = ModernProject.taskLL.displayNodes(true);
-        String[] eventNames = ModernProject.eventsLL.displayNodes();
+        //String[] eventNames = ModernProject.eventsLL.displayNodes();
         taskListView.getItems().addAll(taskName);
-        eventListView.getItems().addAll(eventNames);
+        //eventListView.getItems().addAll(eventNames);
+
+        List<Events> es = eventService.getAllEvents();
+        for (Events e : es){
+            eventListView.getItems().add(e.getEventName() + " on " + e.getEventDate());
+        }
     }
 }
