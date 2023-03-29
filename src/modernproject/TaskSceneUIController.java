@@ -57,10 +57,12 @@ public class TaskSceneUIController implements Initializable {
         if(taskName == null || taskName.isEmpty()) {
             taskSelectedArea.setText("Nothing is Selected");
         }else {
-            for (Tasks tasks : ModernProject.taskLL) {
+                for (Tasks tasks : taskService.getAllTasks()) {
                 String realName = taskName.split("on")[0];
                 realName = realName.substring(0, realName.length() - 1);
-                if (Objects.equals(tasks.getTaskName(), realName)) {
+                System.out.println(realName);
+                System.out.println(tasks.getTaskName());
+                if (Objects.equals(tasks.getTaskName(), realName )) {
                     t = tasks;
                     break;
                 }
@@ -122,7 +124,9 @@ public class TaskSceneUIController implements Initializable {
         Tasks t = null;
         if(!(taskName == null || taskName.isEmpty())) {
             for (Tasks tasks : ModernProject.taskLL) {
-                if (tasks.getTaskName().equals(taskName)) {
+                String realName = taskName.split("on")[0];
+                realName = realName.substring(0, realName.length() - 1);
+                if (Objects.equals(tasks.getTaskName(), realName)) {
                     t = tasks;
                     break;
                 }
@@ -144,13 +148,25 @@ public class TaskSceneUIController implements Initializable {
         }
     }
 
-    @FXML private void completeBtn(ActionEvent event) throws IOException{
+    @FXML private void completeBtn(ActionEvent event) throws IOException, SQLException {
         String taskName = taskListView.getSelectionModel().getSelectedItem();
         TaskServices o = new TaskServices();
-
+        Tasks t = null;
         if(!(taskName == null || taskName.isEmpty())) {
-            Tasks t = o.getTasks(taskName);
+            String finalTaskName = "";
+                List<Tasks> taskList = o.getAllTasks();
+                for (Tasks tasks : taskList) {
+                    String realName = taskName.split("on")[0];
+                    realName = realName.substring(0, realName.length() - 1);
+                    if (Objects.equals(tasks.getTaskName(), realName)) {
+                        finalTaskName = realName;
+                        t = tasks;
+                        break;
+                    }
+                }
+
             t.setStatus("Completed");
+            o.updateTask(t, finalTaskName);
 
             Parent taskParent = FXMLLoader.load(getClass().getResource("TaskSceneUI.fxml"));
             Scene taskScene = new Scene(taskParent);
@@ -167,22 +183,27 @@ public class TaskSceneUIController implements Initializable {
         System.out.println(taskName);
         Tasks t = null;
         TaskServices o = new TaskServices();
+        String finalTaskName = "";
         if(!(taskName == null || taskName.isEmpty())) {
             List<Tasks> taskList = o.getAllTasks();
             for (Tasks tasks : taskList) {
-                if (tasks.getTaskName().equals(taskName)) {
+                String realName = taskName.split("on")[0];
+                realName = realName.substring(0, realName.length() - 1);
+                if (Objects.equals(tasks.getTaskName(), realName)) {
+                    finalTaskName = realName;
                     t = tasks;
                     break;
                 }
             }
             if (t != null) {
-                t = o.getTasks(taskName);
                 String[] edits = t.transferEditToFile(taskSelectedArea);
                 t.setTaskName(edits[0]);
                 t.setDueDate(edits[1]);
                 t.setType(edits[2]);
                 t.setDesc(edits[3]);
-                o.updateTask(t, taskName);
+                o.updateTask(t, finalTaskName);
+                taskListView.getItems().clear();
+                loadData();
             }
 
 

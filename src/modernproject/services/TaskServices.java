@@ -53,7 +53,7 @@ public class TaskServices {
     public List<Tasks> getAllTasks(){
         List<Tasks> tasks = new ArrayList<>();
         try {
-            PreparedStatement stmt = mysqlCon.getCon().prepareStatement("select * from tasks where user_id = ? and status = 'Not Done'");
+            PreparedStatement stmt = mysqlCon.getCon().prepareStatement("select * from tasks where user_id = ? ");
             stmt.setInt(1, signedUser.getId());
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {

@@ -5,26 +5,23 @@
       <artifact name="TaskManager" />
     </artifacts-to-build>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2bb7d0aa-b7dd-403b-acd9-a49914b481af" name="Default Changelist" comment="linked events to database">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModernProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ModernProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/modernproject/HomeSceneUIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/HomeSceneUIController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/modernproject/LinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/LinkedList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/modernproject/LoginSceneUIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/LoginSceneUIController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/modernproject/ModernProject.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/ModernProject.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/modernproject/MysqlConSingleton.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/MysqlConSingleton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/modernproject/Task.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/modernproject/TaskInputSceneUIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/TaskInputSceneUIController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/modernproject/TaskSceneUIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/TaskSceneUIController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/modernproject/Tasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/Tasks.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/modernproject/services/TaskServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/services/TaskServices.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modernproject/HomeSceneUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/HomeSceneUIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modernproject/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modernproject/LoginSceneUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/LoginSceneUIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modernproject/ModernProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/ModernProject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modernproject/TaskInputSceneUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/TaskInputSceneUIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/LoginSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/LoginSceneUI.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/MysqlConSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/MysqlConSingleton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/SignUpSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/SignUpSceneUI.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modernproject/TaskSceneUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/TaskSceneUIController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modernproject/services/TaskServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/services/TaskServices.java" afterDir="false" />
     </list>
@@ -125,15 +122,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;V:/INFO-NEV/BUT-INFO-NEV-2-CDV_APP/jd594217/Semestre 4/SAE/mysql-connector-java-8.0.25.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "C:/Users/mj396287/Downloads/mysql-connector-java-8.0.25.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.ModernProject">
     <configuration name="ModernProject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="modernproject.ModernProject" />
