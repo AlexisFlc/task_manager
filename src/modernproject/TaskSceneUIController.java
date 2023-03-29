@@ -17,6 +17,7 @@ import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import modernproject.services.EventService;
+import modernproject.services.TaskServices;
 
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDate;
@@ -45,14 +46,27 @@ public class TaskSceneUIController implements Initializable {
         taskSelectedArea.setText("Nothing is Selected");
     }
 
-    @FXML public void handleMouseClick(MouseEvent arg0) {
+    @FXML public void handleMouseClick(MouseEvent arg0) throws SQLException {
         String taskName = taskListView.getSelectionModel().getSelectedItem();
+        Tasks t = null;
+        TaskServices o = new TaskServices();
         if(taskName == null || taskName.isEmpty()) {
             taskSelectedArea.setText("Nothing is Selected");
         }else {
-            Tasks o = ModernProject.taskLL.findNode(taskName);
-            taskSelectedArea.setText("Task Name: " + o.getTaskName() + "\n" + "Due Date: " + o.getDueDate()
-                    + "\n" + "Type: " + o.getType() + "\n" + "Description: " + o.getDesc());
+            for (Tasks tasks : ModernProject.taskLL) {
+                if (tasks.getTaskName().equals(taskName)) {
+                    t = tasks;
+                    break;
+                }
+
+            }
+            if (t != null)
+                o.deleteTask(t.getTaskName());
+            else {
+                System.out.println("Task not found");
+            }
+            taskSelectedArea.setText("Task Name: " + t.getTaskName() + "\n" + "Due Date: " + t.getDueDate()
+                    + "\n" + "Type: " + t.getType() + "\n" + "Description: " + t.getDesc());
         }
     }
     
@@ -89,30 +103,6 @@ public class TaskSceneUIController implements Initializable {
         taskWindow.setTitle("Task Manager - Task");
     }
 
-    @FXML private void calendarButtonAction(ActionEvent event) throws IOException {
-        Parent calendarParent = FXMLLoader.load(getClass().getResource("CalendarSceneUI.fxml"));
-        Scene calendarScene = new Scene(calendarParent);
-        Stage calendarWindow = (Stage)((Node)event.getSource()).getScene().getWindow();
-        
-        calendarWindow.setScene(calendarScene);
-        calendarWindow.show();
-        calendarWindow.setResizable(false);
-        calendarWindow.setTitle("Task Manager - Calendar");
-
-    }
-
-    @FXML private void journalButtonAction(ActionEvent event) throws IOException {
-        Parent journalParent = FXMLLoader.load(getClass().getResource("JournalSceneUI.fxml"));
-        Scene journalScene = new Scene(journalParent);
-        Stage journalWindow = (Stage)((Node)event.getSource()).getScene().getWindow();
-        journalWindow.setScene(journalScene);
-        journalWindow.show();
-        journalWindow.setResizable(false);
-        journalWindow.setTitle("Task Manager - Journal");
-
-        ErrorHandle o = new ErrorHandle();
-        o.warningMessage();
-    }
     
     @FXML private void addBtnAction(ActionEvent event) throws IOException {
     	Parent inputParent = FXMLLoader.load(getClass().getResource("TaskInputSceneUI.fxml"));
@@ -125,13 +115,23 @@ public class TaskSceneUIController implements Initializable {
         inputWindow.setTitle("Task Manager - Input");
     }
 
-    @FXML private void deleteBtnAction(ActionEvent event) throws IOException{
+    @FXML private void deleteBtnAction(ActionEvent event) throws IOException, SQLException {
         String taskName = taskListView.getSelectionModel().getSelectedItem();
+        TaskServices o = new TaskServices();
+        Tasks t = null;
         if(!(taskName == null || taskName.isEmpty())) {
-            Tasks o = ModernProject.taskLL.findNode(taskName);
-            ModernProject.taskLL.removeNode(o);
-            ModernProject.taskLL.listToFile("taskList.txt");
-            ModernProject.setSortedLL();
+            for (Tasks tasks : ModernProject.taskLL) {
+                if (tasks.getTaskName().equals(taskName)) {
+                    t = tasks;
+                    break;
+                }
+
+            }
+           if (t != null)
+             o.deleteTask(t.getTaskName());
+           else {
+               System.out.println("Task not found");
+              }
 
             Parent taskParent = FXMLLoader.load(getClass().getResource("TaskSceneUI.fxml"));
             Scene taskScene = new Scene(taskParent);
@@ -145,14 +145,11 @@ public class TaskSceneUIController implements Initializable {
 
     @FXML private void completeBtn(ActionEvent event) throws IOException{
         String taskName = taskListView.getSelectionModel().getSelectedItem();
+        TaskServices o = new TaskServices();
+
         if(!(taskName == null || taskName.isEmpty())) {
-            Tasks o = ModernProject.taskLL.findNode(taskName);
-            ModernProject.completedLL.insert(o);
-            ModernProject.taskLL.removeNode(o);
-            ModernProject.taskLL.listToFile("taskList.txt");
-            ModernProject.completedLL.listToFile("completedList.txt");
-            ModernProject.taskLL.fileToList("taskList.txt");
-            ModernProject.setSortedLL();
+            Tasks t = o.getTasks(taskName);
+            t.setStatus("Completed");
 
             Parent taskParent = FXMLLoader.load(getClass().getResource("TaskSceneUI.fxml"));
             Scene taskScene = new Scene(taskParent);
@@ -164,16 +161,19 @@ public class TaskSceneUIController implements Initializable {
         }
     }
 
-    @FXML private void updateBtn(ActionEvent event) throws IOException{
+    @FXML private void updateBtn(ActionEvent event) throws IOException, SQLException {
         String taskName = taskListView.getSelectionModel().getSelectedItem();
+        TaskServices o = new TaskServices();
         if(!(taskName == null || taskName.isEmpty())) {
-            Tasks o = ModernProject.taskLL.findNode(taskName);
-            String[] edits = o.transferEditToFile(taskSelectedArea);
-            o.setTaskName(edits[0]);
-            o.setDueDate(edits[1]);
-            o.setType(edits[2]);
-            o.setDesc(edits[3]);
-            ModernProject.taskLL.listToFile("taskList.txt");
+            Tasks t = o.getTasks(taskName);
+            String[] edits = t.transferEditToFile(taskSelectedArea);
+            t.setTaskName(edits[0]);
+            t.setDueDate(edits[1]);
+            t.setType(edits[2]);
+            t.setDesc(edits[3]);
+
+            o.updateTask(t);
+
 
             Parent taskParent = FXMLLoader.load(getClass().getResource("TaskSceneUI.fxml"));
             Scene taskScene = new Scene(taskParent);
@@ -258,8 +258,12 @@ public class TaskSceneUIController implements Initializable {
     }
 
     private void loadData() throws SQLException {
-        taskName = ModernProject.taskLL.displayNodes(true);
-        //String[] eventNames = ModernProject.eventsLL.displayNodes();
+        int i = 0;
+        for (Tasks task : ModernProject.taskLL){
+            taskName[i] = task.getTaskName();
+            i++;
+        }
+        String[] eventNames = ModernProject.eventsLL.displayNodes();
         taskListView.getItems().addAll(taskName);
         //eventListView.getItems().addAll(eventNames);
 

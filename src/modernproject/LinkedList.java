@@ -209,14 +209,14 @@ public class LinkedList<T extends Comparable<T>> {
                 lineSplit = sc.nextLine().split(" *~ *", -1);
                 if(fileName.equals("completedList.txt")) {
                     Tasks o = new Tasks(lineSplit);
-                    ModernProject.completedLL.insert(o);
+                    ModernProject.completedLL.add(o);
                 } else if(fileName.equals("eventList.txt")) {
                     Events o = new Events(lineSplit);
                     ModernProject.eventsLL.insert(o);
                 } else {
                     Tasks o = new Tasks(lineSplit);
-                    ModernProject.taskLL.insert(o);
-                    ModernProject.sortedLL.insert(o);
+                    ModernProject.taskLL.add(o);
+                    ModernProject.sortedLL.add(o);
                 }
             }
             sc.close();

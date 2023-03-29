@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.animation.Animation;
@@ -62,29 +64,63 @@ public class HomeSceneUIController implements Initializable{
         clock.play();
 
         try{
-            sortedLL.fileToList("taskList.txt");
-        }catch(IOException e){
-            //Ignore
-        }
-        sortedLL.sort();
-        try {
-            loadData();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+            sortedLL = sortTasksByDueDate(taskLL);
+        }catch(Exception e){
+            System.out.println("Error: " + e);
         }
     }
 
+
+    public List<Tasks> sortTasksByDueDate(List<Tasks> taskList) {
+        if(taskList.size() <= 1) {
+            return taskList;
+        }
+
+        int middle = taskList.size() / 2;
+        List<Tasks> left = sortTasksByDueDate(taskList.subList(0, middle));
+        List<Tasks> right = sortTasksByDueDate(taskList.subList(middle, taskList.size()));
+
+        return mergeTasksByDueDate(left, right);
+    }
+
+    private List<Tasks> mergeTasksByDueDate(List<Tasks> left, List<Tasks> right) {
+        List<Tasks> result = new ArrayList<>();
+        int leftIndex = 0;
+        int rightIndex = 0;
+
+        while(leftIndex < left.size() && rightIndex < right.size()) {
+            if(left.get(leftIndex).getDueDate().compareTo(right.get(rightIndex).getDueDate()) < 0) {
+                result.add(left.get(leftIndex));
+                leftIndex++;
+            } else {
+                result.add(right.get(rightIndex));
+                rightIndex++;
+            }
+        }
+
+        result.addAll(left.subList(leftIndex, left.size()));
+        result.addAll(right.subList(rightIndex, right.size()));
+
+        return result;
+    }
+
 	private void loadData() throws SQLException {
-        ntNumLabel.setText(String.format("%03d%n", ModernProject.taskLL.getSize()));
-        ctNumLabel.setText(String.format("%03d%n", ModernProject.completedLL.getSize()));
+        ntNumLabel.setText(String.format("%03d%n", ModernProject.taskLL.size()));
+        ctNumLabel.setText(String.format("%03d%n", ModernProject.completedLL.size()));
         eNumLabel.setText(String.format("%03d%n", eventService.getAllEvents().size()));
 
+
         DecimalFormat dFormat = new DecimalFormat("00.00");
-        double pp = ((double)completedLL.getSize() / (double)taskLL.getSize()) * 100;
+        double pp = ((double)completedLL.size() / (double)taskLL.size()) * 100;
         ppNumLabel.setText(dFormat.format(pp) + "%");
-        String[] taskName = new String[eventService.getAllEvents().size()];
+
+        String[] eventName = new String[eventService.getAllEvents().size()];
         for(int i = 0; i < eventService.getAllEvents().size(); i++) {
-        	taskName[i] = eventService.getAllEvents().get(i).getEventName();
+        	eventName[i] = eventService.getAllEvents().get(i).getEventName();
+        }
+        String[] taskName = new String[sortedLL.size()];
+        for(int i = 0; i < sortedLL.size(); i++){
+            taskName[i] = "• " + sortedLL.get(i).getTaskName() + "\n\tdue by " + sortedLL.get(i).getDueDate();
         }
         deadlineList.getItems().addAll(taskName);
     }

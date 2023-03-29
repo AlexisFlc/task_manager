@@ -20,6 +20,14 @@ public class Tasks implements Comparable<Tasks> {
         this.desc = dataArr[3];
     }
 
+    public Tasks(String taskN, String date, String type, String desc, String status) {
+        this.taskN = taskN;
+        this.date = date;
+        this.type = type;
+        this.desc = desc;
+        this.status = status;
+    }
+
     public String getTaskName() {
         return taskN;
     }

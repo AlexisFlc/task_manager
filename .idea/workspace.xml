@@ -6,11 +6,31 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="2bb7d0aa-b7dd-403b-acd9-a49914b481af" name="Default Changelist" comment="linked events to database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/modernproject/HomeControlSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/HomeControlSceneUI.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/modernproject/HomeSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/HomeSceneUI.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/modernproject/TaskSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/TaskSceneUI.fxml" afterDir="false" />
+=======
+    <list default="true" id="2bb7d0aa-b7dd-403b-acd9-a49914b481af" name="Default Changelist" comment="start TaskServices.java">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/MysqlConSingleton.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/MysqlConSingleton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/TaskInputSceneUIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/TaskInputSceneUIController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/TaskSceneUIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/TaskSceneUIController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/Tasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/Tasks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/UserAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/UserAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/UserInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/HomeSceneUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/HomeSceneUIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/LoginSceneUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/LoginSceneUIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/ModernProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/ModernProject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/Task.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/TaskInputSceneUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/TaskInputSceneUIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/TaskSceneUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/TaskSceneUIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/Tasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/Tasks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/services/TaskServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/services/TaskServices.java" afterDir="false" />
+>>>>>>> origin/tasks
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,6 +205,16 @@
       <option name="project" value="LOCAL" />
       <updated>1679923329633</updated>
     </task>
+<<<<<<< HEAD
+=======
+    <task id="LOCAL-00003" summary="start TaskServices.java">
+      <created>1679063693869</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679063693869</updated>
+    </task>
+>>>>>>> origin/tasks
     <option name="localTasksCounter" value="4" />
     <servers />
   </component>
@@ -273,8 +303,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="creation de mysqlcon" />
+<<<<<<< HEAD
     <MESSAGE value="linked events to database" />
     <option name="LAST_COMMIT_MESSAGE" value="linked events to database" />
+=======
+    <MESSAGE value="userAction is service" />
+    <MESSAGE value="start TaskServices.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="start TaskServices.java" />
+>>>>>>> origin/tasks
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/images/CALENDAR.PNG">

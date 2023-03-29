@@ -5,10 +5,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ModernProject extends Application {
     public static UserInfo signedUser;
-    public static LinkedList<Tasks> taskLL, completedLL, sortedLL;
+    public static List<Tasks> taskLL, completedLL, sortedLL;
     public static LinkedList<Events> eventsLL;
     public static StackLinkedList journalLL;
     public static File directory;
@@ -23,9 +25,9 @@ public class ModernProject extends Application {
         //Sets up all limitations and title of the start GUI Panel
 
         //Initialize Linked List that will be needed for this program
-        taskLL = new LinkedList<Tasks>();
-        completedLL = new LinkedList<Tasks>();
-        sortedLL = new LinkedList<Tasks>();
+        taskLL = new ArrayList<>();
+        completedLL = new ArrayList<>();
+        sortedLL = new ArrayList<>();
         eventsLL = new LinkedList<Events>();
         journalLL = new StackLinkedList();
         setDirectory();
@@ -35,19 +37,19 @@ public class ModernProject extends Application {
     	signedUser = user;
     }
 
-    public static LinkedList<Tasks> getLinkedList(){
+    public static List<Tasks> getLinkedList(){
         return taskLL;
     }
 
     public static void setLL() {
-        taskLL = new LinkedList<Tasks>();
-        completedLL = new LinkedList<Tasks>();
+        taskLL = new ArrayList<Tasks>();
+        completedLL = new ArrayList<Tasks>();
         eventsLL = new LinkedList<Events>();
         journalLL = new StackLinkedList();
     }
 
     public static void setSortedLL(){
-        sortedLL = new LinkedList<Tasks>();
+        sortedLL = new ArrayList<Tasks>();
     }
 
     public static void main(String[] args) {
