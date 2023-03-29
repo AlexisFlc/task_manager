@@ -11,7 +11,7 @@ import java.util.List;
 public class ModernProject extends Application {
     public static UserInfo signedUser;
     public static List<Tasks> taskLL, completedLL, sortedLL;
-    public static LinkedList<Events> eventsLL;
+    public static ArrayList<Events> eventsLL;
     public static StackLinkedList journalLL;
     public static File directory;
     
@@ -28,7 +28,7 @@ public class ModernProject extends Application {
         taskLL = new ArrayList<>();
         completedLL = new ArrayList<>();
         sortedLL = new ArrayList<>();
-        eventsLL = new LinkedList<Events>();
+        eventsLL = new ArrayList<Events>();
         journalLL = new StackLinkedList();
         setDirectory();
     }
@@ -44,7 +44,7 @@ public class ModernProject extends Application {
     public static void setLL() {
         taskLL = new ArrayList<Tasks>();
         completedLL = new ArrayList<Tasks>();
-        eventsLL = new LinkedList<Events>();
+        eventsLL = new ArrayList<Events>();
         journalLL = new StackLinkedList();
     }
 

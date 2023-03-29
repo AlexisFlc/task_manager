@@ -5,6 +5,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -23,18 +24,21 @@ import java.time.format.DateTimeFormatter;
 import java.time.LocalDate;
 
 import static modernproject.ModernProject.signedUser;
+import static modernproject.ModernProject.taskLL;
 
 public class TaskSceneUIController implements Initializable {
     @FXML private TextField searchField;
     @FXML private TextField nameText;
     @FXML private DatePicker dateText;
     @FXML private TextField dateField;
-    @FXML private ListView<String> taskListView;
-    @FXML private ListView<String> eventListView;
+    @FXML private ListView<String> taskListView = new ListView<>();
+    @FXML private ListView<String> eventListView = new ListView<>();
     @FXML private TextArea taskSelectedArea;
     private String[] taskName;
 
     public EventService eventService = new EventService();
+
+    public TaskServices taskService = new TaskServices();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -54,16 +58,13 @@ public class TaskSceneUIController implements Initializable {
             taskSelectedArea.setText("Nothing is Selected");
         }else {
             for (Tasks tasks : ModernProject.taskLL) {
-                if (tasks.getTaskName().equals(taskName)) {
+                String realName = taskName.split("on")[0];
+                realName = realName.substring(0, realName.length() - 1);
+                if (Objects.equals(tasks.getTaskName(), realName)) {
                     t = tasks;
                     break;
                 }
 
-            }
-            if (t != null)
-                o.deleteTask(t.getTaskName());
-            else {
-                System.out.println("Task not found");
             }
             taskSelectedArea.setText("Task Name: " + t.getTaskName() + "\n" + "Due Date: " + t.getDueDate()
                     + "\n" + "Type: " + t.getType() + "\n" + "Description: " + t.getDesc());
@@ -163,16 +164,26 @@ public class TaskSceneUIController implements Initializable {
 
     @FXML private void updateBtn(ActionEvent event) throws IOException, SQLException {
         String taskName = taskListView.getSelectionModel().getSelectedItem();
+        System.out.println(taskName);
+        Tasks t = null;
         TaskServices o = new TaskServices();
         if(!(taskName == null || taskName.isEmpty())) {
-            Tasks t = o.getTasks(taskName);
-            String[] edits = t.transferEditToFile(taskSelectedArea);
-            t.setTaskName(edits[0]);
-            t.setDueDate(edits[1]);
-            t.setType(edits[2]);
-            t.setDesc(edits[3]);
-
-            o.updateTask(t);
+            List<Tasks> taskList = o.getAllTasks();
+            for (Tasks tasks : taskList) {
+                if (tasks.getTaskName().equals(taskName)) {
+                    t = tasks;
+                    break;
+                }
+            }
+            if (t != null) {
+                t = o.getTasks(taskName);
+                String[] edits = t.transferEditToFile(taskSelectedArea);
+                t.setTaskName(edits[0]);
+                t.setDueDate(edits[1]);
+                t.setType(edits[2]);
+                t.setDesc(edits[3]);
+                o.updateTask(t, taskName);
+            }
 
 
             Parent taskParent = FXMLLoader.load(getClass().getResource("TaskSceneUI.fxml"));
@@ -182,6 +193,7 @@ public class TaskSceneUIController implements Initializable {
             taskWindow.show();
             taskWindow.setResizable(false);
             taskWindow.setTitle("Task Manager - Task");
+            loadData();
         }
     }
 
@@ -198,7 +210,6 @@ public class TaskSceneUIController implements Initializable {
         eventData[0] = nameText.getText();
         eventData[1] = date.format(localDate);
         if(!(eventData[0].isEmpty() || eventData[1].isEmpty())) {
-
 
             Events o = new Events(eventData);
             if (!eventService.checkIfEventExist(o.getEventName(), signedUser.getFirstName())){
@@ -258,15 +269,11 @@ public class TaskSceneUIController implements Initializable {
     }
 
     private void loadData() throws SQLException {
-        int i = 0;
-        for (Tasks task : ModernProject.taskLL){
-            taskName[i] = task.getTaskName();
-            i++;
-        }
-        String[] eventNames = ModernProject.eventsLL.displayNodes();
-        taskListView.getItems().addAll(taskName);
-        //eventListView.getItems().addAll(eventNames);
+        List<Tasks> ta = taskService.getAllTasks();
 
+        for (Tasks task : ta){
+            taskListView.getItems().add(task.getTaskName() + " on " + task.getDueDate());
+        }
         List<Events> es = eventService.getAllEvents();
         for (Events e : es){
             eventListView.getItems().add(e.getEventName() + " on " + e.getEventDate());

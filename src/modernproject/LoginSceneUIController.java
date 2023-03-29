@@ -56,7 +56,7 @@ public class LoginSceneUIController implements Initializable {
                     ModernProject.updateDir(userDir);
                     ModernProject.taskLL = o.getAllNotDone();
                     ModernProject.completedLL = o.getAllCompleted();
-                    ModernProject.eventsLL.fileToList("eventList.txt");
+                    //ModernProject.eventsLL.fileToList("eventList.txt");
                     ModernProject.journalLL.fileToList();
 
                     Parent homeParent = FXMLLoader.load(getClass().getResource("HomeSceneUI.fxml"));

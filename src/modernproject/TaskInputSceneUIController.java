@@ -36,7 +36,7 @@ public class TaskInputSceneUIController implements Initializable {
 	@FXML private void doneBtnAction(ActionEvent event) throws IOException, SQLException {
 		LocalDate localDate = dateInput.getValue();
 		DateTimeFormatter date = DateTimeFormatter.ofPattern("EEEE MMMM dd, yyyy");
-		String dataArr[] = {taskInput.getText(), date.format(localDate), typeInput.getText(), descInput.getText()};
+		String[] dataArr = {taskInput.getText(), date.format(localDate), typeInput.getText(), descInput.getText()};
 		ErrorHandle error = new ErrorHandle();
 		boolean noError = error.checkInputs(dataArr);
 

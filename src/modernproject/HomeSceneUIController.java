@@ -23,6 +23,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import javafx.scene.control.Label;
 import modernproject.services.EventService;
+import modernproject.services.TaskServices;
 
 import java.text.DecimalFormat;
 
@@ -42,7 +43,9 @@ public class HomeSceneUIController implements Initializable{
     private int cmonth, cday, cyear;
 
     public EventService eventService = new EventService();
-    
+
+    public TaskServices taskService = new TaskServices();
+
     @Override
 	public void initialize(URL location, ResourceBundle resources) {
         nameMessageLabel.setText("Welcome " + signedUser.getFirstName() + "!");
@@ -68,8 +71,12 @@ public class HomeSceneUIController implements Initializable{
         }catch(Exception e){
             System.out.println("Error: " + e);
         }
+        try {
+            loadData();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
-
 
     public List<Tasks> sortTasksByDueDate(List<Tasks> taskList) {
         if(taskList.size() <= 1) {
@@ -109,20 +116,26 @@ public class HomeSceneUIController implements Initializable{
         ctNumLabel.setText(String.format("%03d%n", ModernProject.completedLL.size()));
         eNumLabel.setText(String.format("%03d%n", eventService.getAllEvents().size()));
 
-
         DecimalFormat dFormat = new DecimalFormat("00.00");
         double pp = ((double)completedLL.size() / (double)taskLL.size()) * 100;
         ppNumLabel.setText(dFormat.format(pp) + "%");
 
         String[] eventName = new String[eventService.getAllEvents().size()];
         for(int i = 0; i < eventService.getAllEvents().size(); i++) {
-        	eventName[i] = eventService.getAllEvents().get(i).getEventName();
+        	eventName[i] = eventService.getAllEvents().get(i).getEventName() + "\n\tdue by " + eventService.getAllEvents().get(i).getEventDate();
         }
-        String[] taskName = new String[sortedLL.size()];
-        for(int i = 0; i < sortedLL.size(); i++){
-            taskName[i] = "• " + sortedLL.get(i).getTaskName() + "\n\tdue by " + sortedLL.get(i).getDueDate();
+
+        String[] taskName = new String[taskService.getAllTasks().size()];
+        for(int i = 0; i < taskService.getAllTasks().size(); i++) {
+        	taskName[i] = taskService.getAllTasks().get(i).getTaskName() + "\n\tdue by " + taskService.getAllTasks().get(i).getDueDate();
         }
+
+        /*String[] taskName = new String[taskLL.size()];
+        for(int i = 0; i < taskLL.size(); i++){
+            taskName[i] = "• " + taskLL.get(i).getTaskName() + "\n\tdue by " + taskLL.get(i).getDueDate();
+        }*/
         deadlineList.getItems().addAll(taskName);
+        deadlineList.getItems().addAll(eventName);
     }
 
     @FXML void homeButtonAction(ActionEvent event) throws IOException {

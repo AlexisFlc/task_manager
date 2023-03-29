@@ -50,27 +50,46 @@ public class TaskServices {
         return task;
     }
 
+    public List<Tasks> getAllTasks(){
+        List<Tasks> tasks = new ArrayList<>();
+        try {
+            PreparedStatement stmt = mysqlCon.getCon().prepareStatement("select * from tasks where user_id = ? and status = 'Not Done'");
+            stmt.setInt(1, signedUser.getId());
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                tasks.add(new Tasks(rs.getString("name"), rs.getString("due_date"), rs.getString("type"), rs.getString("description"), rs.getString("status")));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return tasks;
+    }
+
     public void addTask(Tasks task) throws SQLException {
-        PreparedStatement stmt = mysqlCon.getCon().prepareStatement("insert into tasks (name, description, user_id,type,due_date,status) values (?, ?, ?, ?, ?, ?)");
-        stmt.setString(1, task.getTaskName());
-        stmt.setString(2, task.getDesc());
-        stmt.setInt(3,  signedUser.getId());
-        stmt.setString(4, task.getType());
-        stmt.setString(5, task.getDueDate());
-        stmt.setString(6, task.getStatus());
-        stmt.executeUpdate();
+        try {
+            PreparedStatement stmt = mysqlCon.getCon().prepareStatement("insert into tasks (name, description, user_id, type, due_date, status) values (?, ?, ?, ?, ?, ?)");
+            stmt.setString(1, task.getTaskName());
+            stmt.setString(2, task.getDesc());
+            stmt.setInt(3,  signedUser.getId());
+            stmt.setString(4, task.getType());
+            stmt.setString(5, task.getDueDate());
+            stmt.setString(6, task.getStatus());
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw e;
+        }
     }
 
 
 
-    public void updateTask(Tasks task) throws SQLException{
+    public void updateTask(Tasks task, String name) throws SQLException{
         PreparedStatement stmt = mysqlCon.getCon().prepareStatement("update tasks set name = ?, description = ?, type = ?, due_date = ?, status = ? where name = ? and user_id = ?");
         stmt.setString(1, task.getTaskName());
         stmt.setString(2, task.getDesc());
         stmt.setString(3, task.getType());
         stmt.setString(4, task.getDueDate());
         stmt.setString(5, task.getStatus());
-        stmt.setString(6, task.getTaskName());
+        stmt.setString(6, name);
         stmt.setInt(7, signedUser.getId());
         stmt.executeUpdate();
     }

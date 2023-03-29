@@ -212,7 +212,7 @@ public class LinkedList<T extends Comparable<T>> {
                     ModernProject.completedLL.add(o);
                 } else if(fileName.equals("eventList.txt")) {
                     Events o = new Events(lineSplit);
-                    ModernProject.eventsLL.insert(o);
+                    ModernProject.eventsLL.add(o);
                 } else {
                     Tasks o = new Tasks(lineSplit);
                     ModernProject.taskLL.add(o);
