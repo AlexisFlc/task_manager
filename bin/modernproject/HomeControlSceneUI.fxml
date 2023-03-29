@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="606.0" prefWidth="1025.0" styleClass="parent" stylesheets="@ModernStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modernproject.HomeControlSceneUIController">
+<AnchorPane id="AnchorPane" prefHeight="606.0" prefWidth="1025.0" styleClass="parent" stylesheets="@ModernStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modernproject.HomeControlSceneUIController">
    <children>
       <HBox prefHeight="75.0" prefWidth="1029.0">
          <children>
@@ -44,7 +41,7 @@
             <String fx:value="sidebar" />
             <String fx:value="container-border" />
          </styleClass></VBox>
-      <HBox layoutX="14.0" layoutY="75.0" prefHeight="50.0" prefWidth="999.0">
+      <HBox alignment="TOP_CENTER" layoutX="14.0" layoutY="75.0" prefHeight="50.0" prefWidth="999.0">
          <children>
             <HBox prefHeight="48.0" prefWidth="249.0" styleClass="btns">
                <children>
