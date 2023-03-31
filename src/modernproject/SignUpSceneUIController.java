@@ -63,9 +63,11 @@ public class SignUpSceneUIController implements Initializable {
         boolean noError = error.checkSignUp(signUpArray);
         
         if(noError){
-        	UserInfo user = new UserInfo(fnText.getText(), lnText.getText(), userText.getText(), passText.getText());
+            PasswordEncryption encrypt = new PasswordEncryption();
+            String password = passText.getText();
+            String encryptedPassword =  encrypt.hash(password);
+            UserInfo user = new UserInfo(fnText.getText(), lnText.getText(), userText.getText(), encryptedPassword);
             UserAction.serializeSignUp(user);
-            
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setContentText("Thank you for signing up! Please login to access the features!");
             alert.showAndWait();

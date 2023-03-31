@@ -86,6 +86,16 @@
                   <Font name="Apple SD GothicNeo ExtraBold" size="13.0" />
                </font>
             </PasswordField>
+            <TextField fx:id="hiddenPass" layoutX="225.0" layoutY="204.0" prefHeight="27.0" prefWidth="325.0"  styleClass="login-input">
+               <font>
+                  <Font name="Apple SD GothicNeo ExtraBold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="hiddenConfirm" layoutX="225.0" layoutY="240.0" prefHeight="27.0" prefWidth="325.0"  styleClass="login-input">
+               <font>
+                  <Font name="Apple SD GothicNeo ExtraBold" size="13.0" />
+               </font>
+            </TextField>
             <PasswordField fx:id="confirmText" layoutX="225.0" layoutY="240.0" prefHeight="27.0" prefWidth="325.0" promptText="Confirm Password" styleClass="login-input">
                <font>
                   <Font name="Apple SD GothicNeo ExtraBold" size="13.0" />

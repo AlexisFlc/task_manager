@@ -8,6 +8,7 @@ package modernproject;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.Objects;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -48,8 +49,9 @@ public class LoginSceneUIController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.ERROR);
     	if(!(userNameField.getText().equals("") && passwordField.getText().equals(""))){
             UserInfo userFound = UserAction.readUserData(userNameField.getText());
+            String hashedPassword = PasswordEncryption.hash(passwordField.getText());
             if(!(userFound == null)) {
-                if(userFound.getUserName().equals(userNameField.getText()) && userFound.getPassword().equals(passwordField.getText())) {
+                if (userFound.getUserName().equals(userNameField.getText()) && userFound.getPassword().equals(hashedPassword)) {
                     TaskServices o = new TaskServices();
                     ModernProject.setSignedUser(userFound);
                     File userDir = new File(ModernProject.directory, userFound.getUserName());
