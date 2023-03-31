@@ -6,7 +6,7 @@ class MysqlCon{
     public static void main(String[] args){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/calentask","root","mdp");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/calentask","root","mondtb");
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("select * from users");
             while(rs.next()){

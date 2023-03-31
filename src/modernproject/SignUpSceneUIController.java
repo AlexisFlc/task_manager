@@ -58,6 +58,7 @@ public class SignUpSceneUIController implements Initializable {
     }
     
     @FXML private void signButtonAction(ActionEvent event) throws IOException, ClassNotFoundException, SQLException {
+
         String signUpArray[] = {fnText.getText(), lnText.getText(), userText.getText(), passText.getText(), confirmText.getText()};
         ErrorHandle error = new ErrorHandle();
         boolean noError = error.checkSignUp(signUpArray);
@@ -67,6 +68,13 @@ public class SignUpSceneUIController implements Initializable {
             String password = passText.getText();
             String encryptedPassword =  encrypt.hash(password);
             UserInfo user = new UserInfo(fnText.getText(), lnText.getText(), userText.getText(), encryptedPassword);
+            //if username already exist, show error message and dont add to database
+            if(MysqlConSingleton.getInstance().getUserInfo(user.getUserName()) != null) {
+                System.out.println("This username already exists! Please try again.");
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("This username already exists! Please try again.");
+                alert.showAndWait();
+            }
             UserAction.serializeSignUp(user);
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setContentText("Thank you for signing up! Please login to access the features!");
