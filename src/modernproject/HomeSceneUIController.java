@@ -49,7 +49,6 @@ public class HomeSceneUIController implements Initializable{
     @Override
 	public void initialize(URL location, ResourceBundle resources) {
         nameMessageLabel.setText("Welcome " + signedUser.getFirstName() + "!");
-    	nameMessageLabel1.setText("Welcome " + signedUser.getFirstName() + "!");
     	Timeline clock = new Timeline(new KeyFrame(Duration.ZERO, e -> {        
             second = LocalDateTime.now().getSecond();
             minute = LocalDateTime.now().getMinute();
@@ -112,8 +111,8 @@ public class HomeSceneUIController implements Initializable{
     }
 
 	private void loadData() throws SQLException {
-        ntNumLabel.setText(String.format("%03d%n", ModernProject.taskLL.size()));
-        ctNumLabel.setText(String.format("%03d%n", ModernProject.completedLL.size()));
+        ntNumLabel.setText(String.format("%03d%n", taskService.getAllNotDone().size()));
+        ctNumLabel.setText(String.format("%03d%n", completedLL.size()));
         eNumLabel.setText(String.format("%03d%n", eventService.getAllEvents().size()));
 
         DecimalFormat dFormat = new DecimalFormat("00.00");

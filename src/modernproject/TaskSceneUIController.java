@@ -166,6 +166,10 @@ public class TaskSceneUIController implements Initializable {
                 }
 
             t.setStatus("Completed");
+                //add 1 to ctNumLabel
+            //add 1 to ctNumLabel
+
+
             o.updateTask(t, finalTaskName);
 
             Parent taskParent = FXMLLoader.load(getClass().getResource("TaskSceneUI.fxml"));
