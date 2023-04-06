@@ -9,17 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bb7d0aa-b7dd-403b-acd9-a49914b481af" name="Default Changelist" comment="Error message if username already exists">
+    <list default="true" id="2bb7d0aa-b7dd-403b-acd9-a49914b481af" name="Default Changelist" comment="Hash password">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/modernproject/HomeSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/HomeSceneUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/modernproject/HomeSceneUIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/HomeSceneUIController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/modernproject/TaskInputSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/TaskInputSceneUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/modernproject/TaskSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/TaskSceneUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modernproject/HomeSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/HomeSceneUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modernproject/HomeSceneUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/HomeSceneUIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modernproject/TaskInputSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/TaskInputSceneUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modernproject/TaskSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/TaskSceneUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modernproject/TaskSceneUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/TaskSceneUIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModernProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ModernProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/MysqlCon.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/MysqlCon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/MysqlConSingleton.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/MysqlConSingleton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/SignUpSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/SignUpSceneUI.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/SignUpSceneUIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/SignUpSceneUIController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/MysqlCon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/MysqlCon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/MysqlConSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/MysqlConSingleton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/SignUpSceneUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/SignUpSceneUIController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +48,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -125,8 +125,7 @@
     &quot;last_opened_file_path&quot;: &quot;V:/INFO-NEV/BUT-INFO-NEV-2-CDV_APP/af303746/Semestre4/SAE/task_manager/mysql-connector-java-8.0.25.jar&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
   <component name="RunManager" selected="Application.ModernProject">
@@ -196,14 +195,7 @@
       <option name="project" value="LOCAL" />
       <updated>1680244725644</updated>
     </task>
-    <task id="LOCAL-00004" summary="Error message if username already exists">
-      <created>1680248986860</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1680248986860</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -293,8 +285,7 @@
     <MESSAGE value="creation de mysqlcon" />
     <MESSAGE value="linked events to database" />
     <MESSAGE value="Hash password" />
-    <MESSAGE value="Error message if username already exists" />
-    <option name="LAST_COMMIT_MESSAGE" value="Error message if username already exists" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hash password" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

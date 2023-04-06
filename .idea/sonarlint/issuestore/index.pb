@@ -1,7 +1,25 @@
 
-R
-"src/modernproject/TaskSceneUI.fxml,0\5\0542b59a392c8cc13bf867527730ea98ba367016
 S
 #src/modernproject/LoginSceneUI.fxml,8\4\8466a3999954f313c61a61e5a61064ad10ec3034
 Y
 )src/modernproject/HomeControlSceneUI.fxml,7\f\7f9e69934e9e1d90f6cf99c91641cd7699dc8165
+\
+,src/modernproject/services/EventService.java,d\d\dd5c87514bad366df9fc173a2b3118fe643874b9
+T
+$src/modernproject/ModernProject.java,c\9\c94edc8b20d429dd38edb90cb218f5ab9075a2ee
+R
+"src/modernproject/HomeSceneUI.fxml,b\2\b2d19edadebd080f2070d921e79a5627fd5e4dcf
+\
+,src/modernproject/services/TaskServices.java,d\3\d39ce4539c393742c5e7f95c1b98efbe3ba3bcb0
+O
+src/modernproject/UserInfo.java,d\f\dff3336f0f2663efce84cecea3a8297e912eb4af
+Y
+)src/modernproject/PasswordEncryption.java,2\b\2bd4a2f0a42a0c589e9c79a9f7d9140ee0af5446
+Q
+!src/modernproject/UserAction.java,2\6\26e607e3b6c439e1f7eeb392d1eaa397bafdc81c
+]
+-src/modernproject/LoginSceneUIController.java,d\1\d1218c69bf79a8a7041d27a2adec44d11249474e
+^
+.src/modernproject/SignUpSceneUIController.java,1\1\112993f2a1a1855e1bb495d6cddce98fa016c2c4
+W
+'src/modernproject/TaskInputSceneUI.fxml,a\7\a765b7d28f669a0059bbffbe0ebb624504f82329

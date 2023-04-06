@@ -1,0 +1,34 @@
+
+w
+java:S1488"\Immediately return this expression instead of assigning it to the temporary variable "user".(ï§ê÷þÿÿÿÿ
+w
+java:S1488("\Immediately return this expression instead of assigning it to the temporary variable "user".(³ƒªüÿÿÿÿÿ
+d
+java:S2095/"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ðšÞ<
+j
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(õ ÷ùÿÿÿÿÿ
+U
+java:S1118":Add a private constructor to hide the implicit public one.(‘îÃÑùÿÿÿÿ
+‡
+java:S1130"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(ž–ûÃúÿÿÿÿ
+”
+java:S1130"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(ž–ûÃúÿÿÿÿ
+
+java:S1130"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(µ—™3
+Ž
+java:S1130"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(µ—™3
+N	java:S1060"9Replace this use of System.out or System.err by a logger.(ã†îÃ
+S
+java:S1128"8Remove this unused import 'java.io.BufferedInputStream'.(Š—€åûÿÿÿÿ
+?
+java:S1128")Remove this unused import 'java.io.File'.(†Ð¥Å
+J
+java:S1128"4Remove this unused import 'java.io.FileInputStream'.(˜³ÉÓ
+J
+java:S1128"5Remove this unused import 'java.io.FileOutputStream'.(˜«ªg
+L
+java:S1128"6Remove this unused import 'java.io.ObjectInputStream'.(Éæéœ
+R
+java:S1128	"7Remove this unused import 'java.io.ObjectOutputStream'.(é»Óºûÿÿÿÿ
+F
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ

@@ -1,0 +1,23 @@
+
+e
+java:S2095R"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÅáŠ
+j
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ˆÔæúúÿÿÿÿ
+j
+java:S2095*"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÿæ©Àşÿÿÿÿ
+j
+java:S2095d"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ã¨ÉÇıÿÿÿÿ
+j
+java:S20957"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ˆÔæúúÿÿÿÿ
+Y
+java:S1854">Remove this useless assignment to local variable "userAction".(Ë–¨Ûüÿÿÿÿ
+E
+java:S1172"/Remove this unused method parameter "username".(‚³ê
+E
+java:S2440"*Remove this instantiation of "UserAction".(Ë–¨Ûüÿÿÿÿ
+J
+java:S1481"/Remove this unused "userAction" local variable.(Ë–¨Ûüÿÿÿÿ
+H
+java:S1172b"-Remove this unused method parameter "userID".(ÿ—Áøÿÿÿÿ
+F
+java:S1128"0Remove this unused import 'java.sql.Connection'.(¥ËôÖ

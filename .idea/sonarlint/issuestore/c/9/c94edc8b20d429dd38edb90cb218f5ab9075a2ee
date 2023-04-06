@@ -1,0 +1,61 @@
+
+o
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(®¤™‡
+t
+java:S2293-"YReplace the type specification in this constructor call with the diamond operator ("<>").(®„…µşÿÿÿÿ
+t
+java:S2293."YReplace the type specification in this constructor call with the diamond operator ("<>").(Öİ‡Ğùÿÿÿÿ
+o
+java:S2293/"YReplace the type specification in this constructor call with the diamond operator ("<>").(®¤™‡
+t
+java:S22934"YReplace the type specification in this constructor call with the diamond operator ("<>").(õòéÿÿÿÿÿ
+ƒ
+java:S1319"hThe type of "eventsLL" should be an interface such as "List" rather than the implementation "ArrayList".(¦ÅÊ·üÿÿÿÿ
+q
+java:S1104"VMake signedUser a static final constant or non-public and provide accessors if needed.( ıè—üÿÿÿÿ
+m
+java:S1104"RMake taskLL a static final constant or non-public and provide accessors if needed.(šüí•ıÿÿÿÿ
+r
+java:S1104"WMake completedLL a static final constant or non-public and provide accessors if needed.(šüí•ıÿÿÿÿ
+o
+java:S1104"TMake sortedLL a static final constant or non-public and provide accessors if needed.(šüí•ıÿÿÿÿ
+o
+java:S1104"TMake eventsLL a static final constant or non-public and provide accessors if needed.(¦ÅÊ·üÿÿÿÿ
+k
+java:S1104"UMake journalLL a static final constant or non-public and provide accessors if needed.(ıˆÀ·
+p
+java:S1104"UMake directory a static final constant or non-public and provide accessors if needed.(ÚõÙ‰ÿÿÿÿÿ
+K
+java:S1444"0Make this "public static signedUser" field final( ıè—üÿÿÿÿ
+G
+java:S1444",Make this "public static taskLL" field final(šüí•ıÿÿÿÿ
+L
+java:S1444"1Make this "public static completedLL" field final(šüí•ıÿÿÿÿ
+I
+java:S1444".Make this "public static sortedLL" field final(šüí•ıÿÿÿÿ
+I
+java:S1444".Make this "public static eventsLL" field final(¦ÅÊ·üÿÿÿÿ
+E
+java:S1444"/Make this "public static journalLL" field final(ıˆÀ·
+J
+java:S1444"/Make this "public static directory" field final(ÚõÙ‰ÿÿÿÿÿ
+c
+java:S1659"HDeclare "completedLL" and all following declarations on a separate line.(šüí•ıÿÿÿÿ
+7
+java:S2386"!Make member "taskLL" "protected".(çË’›
+L
+java:S2696"6Make the enclosing method "static" or remove this set.(çË’›
+A
+java:S2386"&Make member "completedLL" "protected".(ó‡°úÿÿÿÿ
+Q
+java:S2696"6Make the enclosing method "static" or remove this set.(ó‡°úÿÿÿÿ
+>
+java:S2386"#Make member "sortedLL" "protected".(Ô‡çøÿÿÿÿ
+Q
+java:S2696"6Make the enclosing method "static" or remove this set.(Ô‡çøÿÿÿÿ
+9
+java:S2386"#Make member "eventsLL" "protected".(®¤™‡
+L
+java:S2696"6Make the enclosing method "static" or remove this set.(®¤™‡
+Q
+java:S2696 "6Make the enclosing method "static" or remove this set.(´Ó›­ÿÿÿÿÿ

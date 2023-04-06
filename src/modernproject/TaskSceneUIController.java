@@ -34,6 +34,14 @@ public class TaskSceneUIController implements Initializable {
     @FXML private ListView<String> taskListView = new ListView<>();
     @FXML private ListView<String> eventListView = new ListView<>();
     @FXML private TextArea taskSelectedArea;
+
+    @FXML private TextArea taskNameArea;
+
+    @FXML private TextArea taskDateArea;
+
+    @FXML private TextArea taskTypeArea;
+
+    @FXML private TextArea taskDescArea;
     private String[] taskName;
 
     public EventService eventService = new EventService();
@@ -47,7 +55,7 @@ public class TaskSceneUIController implements Initializable {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        taskSelectedArea.setText("Nothing is Selected");
+        taskNameArea.setText("Nothing is Selected");
     }
 
     @FXML public void handleMouseClick(MouseEvent arg0) throws SQLException {
@@ -55,7 +63,7 @@ public class TaskSceneUIController implements Initializable {
         Tasks t = null;
         TaskServices o = new TaskServices();
         if(taskName == null || taskName.isEmpty()) {
-            taskSelectedArea.setText("Nothing is Selected");
+            taskNameArea.setText("Nothing is Selected");
         }else {
                 for (Tasks tasks : taskService.getAllTasks()) {
                 String realName = taskName.split("on")[0];
@@ -68,8 +76,12 @@ public class TaskSceneUIController implements Initializable {
                 }
 
             }
-            taskSelectedArea.setText("Task Name: " + t.getTaskName() + "\n" + "Due Date: " + t.getDueDate()
-                    + "\n" + "Type: " + t.getType() + "\n" + "Description: " + t.getDesc());
+            //taskSelectedArea.setText("Task Name: " + t.getTaskName() + "\n" + "Due Date: " + t.getDueDate()
+                    //+ "\n" + "Type: " + t.getType() + "\n" + "Description: " + t.getDesc());
+            taskNameArea.setText("Task Name: " + t.getTaskName());
+            taskDateArea.setText("Due Date: " + t.getDueDate());
+            taskTypeArea.setText("Type: " + t.getType());
+            taskDescArea.setText("Description: " + t.getDesc());
         }
     }
     
@@ -183,6 +195,7 @@ public class TaskSceneUIController implements Initializable {
     }
 
     @FXML private void updateBtn(ActionEvent event) throws IOException, SQLException {
+
         String taskName = taskListView.getSelectionModel().getSelectedItem();
         System.out.println(taskName);
         Tasks t = null;
@@ -200,14 +213,19 @@ public class TaskSceneUIController implements Initializable {
                 }
             }
             if (t != null) {
-                String[] edits = t.transferEditToFile(taskSelectedArea);
-                t.setTaskName(edits[0]);
-                t.setDueDate(edits[1]);
-                t.setType(edits[2]);
-                t.setDesc(edits[3]);
+
+                String[] name = t.transferEditToFile(taskNameArea);
+                t.setTaskName(name[0]);
+                String[] date = t.transferEditToFile(taskDateArea);
+                t.setDueDate(date[0]);
+                String[] type = t.transferEditToFile(taskTypeArea);
+                t.setType(type[0]);
+                String[] desc = t.transferEditToFile(taskDescArea);
+                t.setDesc(desc[0]);
+                System.out.println(t);
                 o.updateTask(t, finalTaskName);
-                taskListView.getItems().clear();
-                loadData();
+                /*taskListView.getItems().clear();
+                loadData();*/
             }
 
 

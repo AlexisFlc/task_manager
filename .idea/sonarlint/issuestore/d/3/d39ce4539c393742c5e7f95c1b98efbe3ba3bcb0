@@ -1,0 +1,39 @@
+
+o
+java:S2293|"YReplace the type specification in this constructor call with the diamond operator ("<>").(í‡¨
+_
+java:S1192-"IDefine a constant instead of duplicating this literal "due_date" 4 times.(ûˆ¼Î
+b
+java:S1192-"LDefine a constant instead of duplicating this literal "description" 4 times.(ûˆ¼Î
+]
+java:S1192-"GDefine a constant instead of duplicating this literal "status" 4 times.(ûˆ¼Î
+e
+java:S2095k"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¯î‡™
+j
+java:S2095("OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ï¯â…ÿÿÿÿÿ
+e
+java:S2095b"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(óÖÚŞ
+e
+java:S2095~"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¯î‡™
+j
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ï¯â…ÿÿÿÿÿ
+j
+java:S2095F"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÿâäŒøÿÿÿÿ
+j
+java:S20958"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ğ„î«ıÿÿÿÿ
+e
+java:S2095V"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ã´Àë
+E
+java:S2440"*Remove this instantiation of "UserAction".(Ë–¨Ûüÿÿÿÿ
+P
+java:S2209"5Change this instance-reference to a static reference.(ÚÖ÷©şÿÿÿÿ
+\
+java:S1126"AReplace this if-then-else statement by a single return statement.(òãã şÿÿÿÿ
+m
+java:S2737O"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(ö™û
+A
+java:S1481o"&Remove this unused "i" local variable.(ùó›Ìøÿÿÿÿ
+B
+java:S1481‚"&Remove this unused "i" local variable.(ùó›Ìøÿÿÿÿ
+P
+java:S1128"5Remove this unused import 'modernproject.LinkedList'.(ÔÃò²øÿÿÿÿ
