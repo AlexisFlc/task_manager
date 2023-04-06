@@ -11,13 +11,13 @@
 
 <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="775.0" stylesheets="@ModernStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modernproject.LoginSceneUIController">
    <children>
-      <HBox prefHeight="75.0" prefWidth="776.0">
+      <HBox prefHeight="75.0" prefWidth="776.0" style="-fx-background-color: #312C51;">
          <styleClass>
             <String fx:value="titleLabel" />
             <String fx:value="container-border" />
          </styleClass>
          <children>
-            <Label text="Task Manager" textFill="#1000c7">
+            <Label text="Task Manager" textFill="#f0c38e">
                <font>
                   <Font name="EE-Alturas" size="37.0" />
                </font>
@@ -25,7 +25,7 @@
                   <Insets left="25.0" top="15.0" />
                </HBox.margin>
             </Label>
-            <ImageView fitHeight="35.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../images/Pencil.png" />
                </image>
@@ -35,7 +35,7 @@
             </ImageView>
          </children>
       </HBox>
-      <HBox layoutY="75.0" prefHeight="50.0" prefWidth="776.0">
+      <HBox layoutY="75.0" prefHeight="50.0" prefWidth="776.0" style="-fx-background-color: #f0c38e;">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
@@ -44,9 +44,9 @@
             <String fx:value="sidebar" />
          </styleClass>
          <children>
-            <HBox prefHeight="48.0" prefWidth="797.0" styleClass="btns">
+            <HBox prefHeight="48.0" prefWidth="797.0" style="-fx-background-color: #f0c38e;" styleClass="btns">
                <children>
-                  <Button fx:id="homeButton" mnemonicParsing="false" onAction="#homeButtonAction" prefHeight="48.0" prefWidth="813.0" text="Go Home" textFill="#1000c7">
+                  <Button fx:id="homeButton" mnemonicParsing="false" onAction="#homeButtonAction" prefHeight="48.0" prefWidth="813.0" style="-fx-background-color: #f0c38e;" text="Go Home" textFill="#312c51">
                      <font>
                         <Font name="EE-Alturas" size="22.0" />
                      </font>
@@ -59,7 +59,7 @@
             </HBox>
          </children>
       </HBox>
-      <AnchorPane layoutX="-8.0" layoutY="125.0" prefHeight="377.0" prefWidth="784.0">
+      <AnchorPane layoutX="-8.0" layoutY="125.0" prefHeight="377.0" prefWidth="784.0" style="-fx-background-color: #48426D;">
          <children>
             <TextField fx:id="userNameField" layoutX="249.0" layoutY="108.0" prefHeight="27.0" prefWidth="281.0" promptText="Username" style="-fx-background-color: transparent;" styleClass="login-input">
                <font>
@@ -71,7 +71,7 @@
                   <Font name="Apple SD GothicNeo ExtraBold" size="13.0" />
                </font>
             </PasswordField>
-            <Button fx:id="loginButton" layoutX="347.0" layoutY="249.0" mnemonicParsing="false" onAction="#loginButtonAction" text="Log In" textFill="#1000c7">
+            <Button fx:id="loginButton" layoutX="347.0" layoutY="249.0" mnemonicParsing="false" onAction="#loginButtonAction" style="-fx-background-color: #f0c38e;" text="Log In" textFill="#312c51">
                <font>
                   <Font name="EE-Alturas" size="20.0" />
                </font>
@@ -85,7 +85,7 @@
             </Button>
             <Line endX="180.0" layoutX="350.0" layoutY="135.0" startX="-100.0" />
             <Line endX="180.0" layoutX="350.0" layoutY="193.0" startX="-100.0" />
-            <Label layoutX="261.0" layoutY="14.0" prefHeight="94.0" prefWidth="255.0" text="Please enter your username and password below." textAlignment="CENTER" textFill="#1000c7" wrapText="true">
+            <Label layoutX="261.0" layoutY="14.0" prefHeight="94.0" prefWidth="255.0" text="Please enter your username and password below." textAlignment="CENTER" textFill="#f0c38e" wrapText="true">
                <font>
                   <Font name="EE-Alturas" size="15.0" />
                </font>

@@ -10,13 +10,13 @@
 
 <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="775.0" stylesheets="@ModernStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modernproject.SignUpSceneUIController">
    <children>
-      <HBox prefHeight="75.0" prefWidth="775.0">
+      <HBox prefHeight="75.0" prefWidth="775.0" style="-fx-background-color: #312C51;">
          <styleClass>
             <String fx:value="container-border" />
             <String fx:value="titleLabel" />
          </styleClass>
          <children>
-            <Label text="Task Manager" textFill="#1000c7">
+            <Label text="Task Manager" textFill="#f0c38e">
                <font>
                   <Font name="EE-Alturas" size="37.0" />
                </font>
@@ -24,7 +24,7 @@
                   <Insets left="25.0" top="15.0" />
                </HBox.margin>
             </Label>
-            <ImageView fitHeight="35.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../images/Pencil.png" />
                </image>
@@ -34,20 +34,20 @@
             </ImageView>
          </children>
       </HBox>
-      <HBox layoutY="75.0" prefHeight="50.0" prefWidth="775.0">
+      <HBox layoutY="75.0" prefHeight="50.0" prefWidth="775.0" style="-fx-background-color: #f0c38e;">
          <styleClass>
             <String fx:value="container-border" />
             <String fx:value="sidebar" />
          </styleClass>
          <children>
-            <Button fx:id="homeButton" mnemonicParsing="false" onAction="#homeButtonAction" prefHeight="141.0" prefWidth="1013.0" style="-fx-background-color: transparent;" text="Go Home" textFill="#1000c7">
+            <Button fx:id="homeButton" mnemonicParsing="false" onAction="#homeButtonAction" prefHeight="141.0" prefWidth="1013.0" style="-fx-background-color: transparent;" text="Go Home" textFill="#312c51">
                <font>
                   <Font name="EE-Alturas" size="20.0" />
                </font>
             </Button>
          </children>
       </HBox>
-      <AnchorPane layoutY="125.0" prefHeight="377.0" prefWidth="775.0">
+      <AnchorPane layoutY="125.0" prefHeight="377.0" prefWidth="775.0" style="-fx-background-color: #48426D;">
          <children>
             <TextField fx:id="hiddenConfirm" layoutX="225.0" layoutY="240.0" prefHeight="27.0" prefWidth="325.0" styleClass="login-input">
                <font>
@@ -84,12 +84,12 @@
                   <Font name="Apple SD GothicNeo ExtraBold" size="13.0" />
                </font>
             </PasswordField>
-            <Label layoutX="268.0" layoutY="22.0" prefHeight="56.0" prefWidth="242.0" text="Please input the information below" textAlignment="CENTER" textFill="#1000c7" wrapText="true">
+            <Label layoutX="268.0" layoutY="22.0" prefHeight="56.0" prefWidth="242.0" text="Please input the information below" textAlignment="CENTER" textFill="#f0c38e" wrapText="true">
                <font>
                   <Font name="EE-Alturas" size="15.0" />
                </font>
             </Label>
-            <Button fx:id="signButton" layoutX="339.0" layoutY="290.0" mnemonicParsing="false" onAction="#signButtonAction" text="Sign Up" textFill="#1000c7">
+            <Button fx:id="signButton" layoutX="339.0" layoutY="290.0" mnemonicParsing="false" onAction="#signButtonAction" style="-fx-background-color: #f0c38e;" text="Sign Up" textFill="#312c51">
                <font>
                   <Font name="EE-Alturas" size="20.0" />
                </font>
@@ -101,7 +101,7 @@
                   <String fx:value="titleLabel" />
                </styleClass>
             </Button>
-            <CheckBox fx:id="showPassword" layoutX="224.0" layoutY="275.0" mnemonicParsing="false" onAction="#showPasswordAction" opacity="0.54" text="Show Password" textFill="#1000c7">
+            <CheckBox fx:id="showPassword" layoutX="224.0" layoutY="275.0" mnemonicParsing="false" onAction="#showPasswordAction" opacity="0.54" text="Show Password" textFill="#f0c38e">
                <font>
                   <Font name="Apple SD GothicNeo ExtraBold" size="10.0" />
                </font>

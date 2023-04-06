@@ -11,9 +11,9 @@
 
 <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1024.0" stylesheets="@ModernStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modernproject.TaskSceneUIController">
    <children>
-      <HBox prefHeight="75.0" prefWidth="1025.0">
+      <HBox prefHeight="75.0" prefWidth="1025.0" style="-fx-background-color: #312C51;">
          <children>
-            <Label text="Task Manager" textFill="#1000c7">
+            <Label text="Task Manager" textFill="#f0c38e">
                <font>
                   <Font name="EE-Alturas" size="37.0" />
                </font>
@@ -21,7 +21,7 @@
                   <Insets left="25.0" top="15.0" />
                </HBox.margin>
             </Label>
-            <ImageView fitHeight="35.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../images/Pencil.png" />
                </image>
@@ -35,7 +35,7 @@
             <String fx:value="container-border" />
          </styleClass>
       </HBox>
-      <HBox alignment="TOP_CENTER" layoutX="13.0" layoutY="74.0" prefHeight="48.0" prefWidth="999.0">
+      <HBox alignment="TOP_CENTER" layoutY="74.0" prefHeight="48.0" prefWidth="1025.0" style="-fx-background-color: #f0c38e;">
          <styleClass>
             <String fx:value="container-border" />
             <String fx:value="sidebar" />
@@ -43,7 +43,7 @@
          <children>
             <HBox prefHeight="48.0" prefWidth="249.75" styleClass="btns">
                <children>
-                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" visible="false">
                      <image>
                         <Image url="@../images/Home.png" />
                      </image>
@@ -51,7 +51,7 @@
                         <Insets left="25.0" top="13.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Button fx:id="homeButton" mnemonicParsing="false" onAction="#homeButtonAction" prefHeight="46.0" prefWidth="227.0" style="-fx-background-color: transparent;" text="Home" textFill="#1000c7">
+                  <Button fx:id="homeButton" mnemonicParsing="false" onAction="#homeButtonAction" prefHeight="46.0" prefWidth="227.0" style="-fx-background-color: transparent;" text="Home" textFill="#312c51">
                      <font>
                         <Font name="EE-Alturas" size="20.0" />
                      </font>
@@ -60,7 +60,7 @@
             </HBox>
             <HBox layoutX="11.0" layoutY="11.0" prefHeight="100.0" prefWidth="249.75" styleClass="btns">
                <children>
-                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" visible="false">
                      <image>
                         <Image url="@../images/Task.png" />
                      </image>
@@ -68,7 +68,7 @@
                         <Insets left="25.0" top="13.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Button fx:id="taskButton" mnemonicParsing="false" onAction="#taskButtonAction" prefHeight="46.0" prefWidth="218.0" style="-fx-background-color: transparent;" text="Tasks" textFill="#1000c7">
+                  <Button fx:id="taskButton" mnemonicParsing="false" onAction="#taskButtonAction" prefHeight="46.0" prefWidth="218.0" style="-fx-background-color: transparent;" text="Tasks" textFill="#312c51">
                      <font>
                         <Font name="EE-Alturas" size="20.0" />
                      </font>
@@ -78,36 +78,19 @@
 
          </children>
       </HBox>
-      <VBox layoutY="74.0" prefHeight="48.0" prefWidth="14.0">
-         <styleClass>
-            <String fx:value="sidebar" />
-            <String fx:value="container-border" />
-         </styleClass>
-      </VBox>
-      <VBox layoutX="1011.0" layoutY="74.0" prefHeight="48.0" prefWidth="14.0">
-         <styleClass>
-            <String fx:value="sidebar" />
-            <String fx:value="container-border" />
-         </styleClass>
-      </VBox>
-      <AnchorPane layoutY="122.0" prefHeight="478.0" prefWidth="1025.0" style="-fx-background-color: #424874;">
+      <AnchorPane layoutY="122.0" prefHeight="478.0" prefWidth="1025.0" style="-fx-background-color: #312C51;">
          <children>
-            <AnchorPane layoutX="16.0" layoutY="11.0" prefHeight="453.0" prefWidth="469.0" style="-fx-background-color: #DCD6F7; -fx-border-color: white; -fx-border-width: 2px;">
+            <AnchorPane layoutX="16.0" layoutY="11.0" prefHeight="453.0" prefWidth="469.0" style="-fx-background-color: #48426D; -fx-border-color: white; -fx-border-width: 2px;">
                <effect>
                   <DropShadow color="#cacfd6" height="15.0" radius="7.0" width="15.0" />
                </effect>
                <children>
-                  <Text fill="#aaaeb2" layoutX="19.0" layoutY="42.0" opacity="0.75" strokeType="OUTSIDE" strokeWidth="0.0" text="To-Do List :" wrappingWidth="158.73284912109375">
+                  <Text fill="#f0c38e" layoutX="21.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To-Do List :" underline="true" wrappingWidth="165.00030517578125">
                      <font>
                         <Font name="Rubik Regular" size="28.0" />
                      </font>
                   </Text>
-                  <Text fill="#424874" layoutX="21.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To-Do List :" underline="true" wrappingWidth="165.00030517578125">
-                     <font>
-                        <Font name="Rubik Regular" size="28.0" />
-                     </font>
-                  </Text>
-                  <Circle fill="DODGERBLUE" layoutX="203.0" layoutY="31.0" radius="15.0" stroke="#424874" strokeType="INSIDE" />
+                  <Circle fill="#f0c38e" layoutX="203.0" layoutY="31.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                   <HBox layoutX="191.0" layoutY="19.0" prefHeight="20.0" prefWidth="24.0">
                      <children>
                         <ImageView fitHeight="24.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
@@ -117,62 +100,57 @@
                         </ImageView>
                      </children>
                   </HBox>
-                  <Button fx:id="addBtn" layoutX="189.0" layoutY="17.0" mnemonicParsing="false" onAction="#addBtnAction" prefHeight="29.0" prefWidth="29.0" style="-fx-background-color: transparent; -fx-border-color: #424874; -fx-border-radius: 300px;" />
+                  <Button fx:id="addBtn" layoutX="188.5" layoutY="16.5" mnemonicParsing="false" onAction="#addBtnAction" prefHeight="29.0" prefWidth="29.0" style="-fx-background-color: transparent; -fx-border-color: #424874; -fx-border-radius: 300px;" />
                   <ListView fx:id="taskListView" layoutX="17.0" layoutY="49.0" onMouseClicked="#handleMouseClick" prefHeight="272.0" prefWidth="435.0" style="-fx-border-color: #424874;" />
                   <ScrollPane layoutX="18.0" layoutY="329.0" minHeight="112" prefHeight="120.0" prefWidth="316.0" style="-fx-background-color: black; -fx-border-color: #424874;">
                      <content>
                         <VBox>
-                           <TextArea fx:id="taskNameArea" minHeight="28" prefHeight="15.0" prefWidth="311.0" promptText="Task name" style="-fx-text-fill: blue;" wrapText="true"/>
-                           <TextArea fx:id="taskDateArea" minHeight="28" prefHeight="15.0" prefWidth="311.0" promptText="Task due date" style="-fx-text-fill: blue;" wrapText="true"/>
-                           <TextArea fx:id="taskTypeArea" minHeight="28" prefHeight="15.0" prefWidth="311.0" promptText="Task type" style="-fx-text-fill: blue;" wrapText="true"/>
-                           <TextArea fx:id="taskDescArea" minHeight="28" prefHeight="15.0" prefWidth="311.0" promptText="Task description" style="-fx-text-fill: blue;" wrapText="true"/>
+                           <TextArea fx:id="taskNameArea" minHeight="28" prefHeight="15.0" prefWidth="311.0" promptText="Task name" style="-fx-text-fill: blue;" wrapText="true" />
+                           <TextArea fx:id="taskDateArea" minHeight="28" prefHeight="15.0" prefWidth="311.0" promptText="Task due date" style="-fx-text-fill: blue;" wrapText="true" />
+                           <TextArea fx:id="taskTypeArea" minHeight="28" prefHeight="15.0" prefWidth="311.0" promptText="Task type" style="-fx-text-fill: blue;" wrapText="true" />
+                           <TextArea fx:id="taskDescArea" minHeight="28" prefHeight="15.0" prefWidth="311.0" promptText="Task description" style="-fx-text-fill: blue;" wrapText="true" />
                         </VBox>
                      </content>
                   </ScrollPane>
-                  <Button fx:id="updateBtn" layoutX="343.0" layoutY="329.0" mnemonicParsing="false" onAction="#updateBtn" prefHeight="27.0" prefWidth="109.0" text="Update" />
-                  <Button fx:id="deleteBtn" layoutX="343.0" layoutY="409.0" mnemonicParsing="false" onAction="#deleteBtnAction" prefHeight="27.0" prefWidth="109.0" text="Delete" />
-                  <Button fx:id="completeBtn" layoutX="343.0" layoutY="369.0" mnemonicParsing="false" onAction="#completeBtn" prefHeight="27.0" prefWidth="109.0" text="Complete" />
+                  <Button fx:id="updateBtn" layoutX="343.0" layoutY="329.0" mnemonicParsing="false" onAction="#updateBtn" prefHeight="27.0" prefWidth="109.0" style="-fx-background-color: #f0c38e;" text="Update" />
+                  <Button fx:id="deleteBtn" layoutX="343.0" layoutY="409.0" mnemonicParsing="false" onAction="#deleteBtnAction" prefHeight="27.0" prefWidth="109.0" style="-fx-background-color: #f0c38e;" text="Delete" />
+                  <Button fx:id="completeBtn" layoutX="343.0" layoutY="369.0" mnemonicParsing="false" onAction="#completeBtn" prefHeight="27.0" prefWidth="109.0" style="-fx-background-color: #f0c38e;" text="Complete" />
                   <TextField fx:id="searchField" layoutX="252.0" layoutY="15.0" prefHeight="30.0" prefWidth="165.0" promptText="Search for Tasks" style="-fx-text-fill: blue;" />
-                  <Circle fill="DODGERBLUE" layoutX="438.0" layoutY="32.0" radius="15.0" stroke="#424874" strokeType="INSIDE" />
-                  <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="427.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                  <Circle fill="#f0c38e" layoutX="438.0" layoutY="31.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                  <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="427.0" layoutY="20.5" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/Search.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="searchBtn" layoutX="424.0" layoutY="18.0" mnemonicParsing="false" onAction="#searchBtnAction" prefHeight="29.0" prefWidth="29.0" style="-fx-background-color: transparent; -fx-border-color: #424874; -fx-border-radius: 300px;" />
+                  <Button fx:id="searchBtn" layoutX="423.5" layoutY="16.5" mnemonicParsing="false" onAction="#searchBtnAction" prefHeight="29.0" prefWidth="29.0" style="-fx-background-color: transparent; -fx-border-color: #424874; -fx-border-radius: 300px;" />
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="501.0" layoutY="10.0" prefHeight="453.0" prefWidth="510.0" style="-fx-background-color: #DCD6F7; -fx-border-color: white; -fx-border-width: 2px;">
+            <AnchorPane layoutX="501.0" layoutY="10.0" prefHeight="453.0" prefWidth="510.0" style="-fx-background-color: #48426D; -fx-border-color: white; -fx-border-width: 2px;">
                <effect>
                   <DropShadow color="#cacfd6" height="15.0" radius="7.0" width="15.0" />
                </effect>
                <children>
-                  <Text fill="#aaaeb2" layoutX="13.0" layoutY="41.0" opacity="0.75" strokeType="OUTSIDE" strokeWidth="0.0" text="Events :" wrappingWidth="152.89105224609375">
-                     <font>
-                        <Font name="Rubik Regular" size="28.0" />
-                     </font>
-                  </Text>
-                  <Text fill="#424874" layoutX="15.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Events :" underline="true" wrappingWidth="162.05859375">
+                  <Text fill="#f0c38e" layoutX="15.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Events :" underline="true" wrappingWidth="162.05859375">
                      <font>
                         <Font name="Rubik Regular" size="28.0" />
                      </font>
                   </Text>
                   <ListView fx:id="eventListView" fixedCellSize="35.0" layoutX="13.0" layoutY="114.0" onMouseClicked="#handleMouseClick" prefHeight="294.0" prefWidth="485.0" style="-fx-border-color: #424874;" />
-                  <Text fill="#424874" layoutX="13.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name of the Event :">
+                  <Text fill="#f0c38e" layoutX="13.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name of the Event :">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Text>
                   <TextField fx:id="nameText" layoutX="156.0" layoutY="51.0" prefHeight="27.0" prefWidth="194.0" promptText="Input Name of the Event" style="-fx-text-fill: blue;" />
-                  <Button fx:id="createBtn" layoutX="362.0" layoutY="51.0" mnemonicParsing="false" onAction="#createBtnAction" prefHeight="54.0" prefWidth="138.0" text="Create Event">
+                  <Button fx:id="createBtn" layoutX="362.0" layoutY="51.0" mnemonicParsing="false" onAction="#createBtnAction" prefHeight="54.0" prefWidth="138.0" style="-fx-background-color: #f0c38e;" text="Create Event">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button fx:id="deleteEventBtn" layoutX="390.0" layoutY="417.0" mnemonicParsing="false" onAction="#deleteEventBtnAction" prefHeight="27.0" prefWidth="109.0" text="Delete Event" />
+                  <Button fx:id="deleteEventBtn" layoutX="390.0" layoutY="417.0" mnemonicParsing="false" onAction="#deleteEventBtnAction" prefHeight="27.0" prefWidth="109.0" style="-fx-background-color: #f0c38e;" text="Delete Event" />
                   <HBox layoutX="14.0" layoutY="84.0" prefHeight="30.0" prefWidth="336.0">
                      <children>
-                        <Text fill="#424874" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of the Event :">
+                        <Text fill="#f0c38e" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of the Event :">
                            <font>
                               <Font size="16.0" />
                            </font>

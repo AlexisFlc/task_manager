@@ -5,22 +5,22 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="363.0" prefWidth="600.0" style="-fx-background-color: #182978; -fx-border-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modernproject.TaskInputSceneUIController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="363.0" prefWidth="600.0" style="-fx-background-color: #48426D; -fx-border-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modernproject.TaskInputSceneUIController">
    <children>
       <HBox alignment="TOP_CENTER" layoutX="160.0" layoutY="8.0" prefHeight="56.0" prefWidth="300.0">
          <children>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="New Task" textAlignment="CENTER" wrappingWidth="300.0">
+            <Text fill="#f0c38e" strokeType="OUTSIDE" strokeWidth="0.0" text="New Task" textAlignment="CENTER" wrappingWidth="300.0">
                <font>
                   <Font name="ZCOOL QingKe HuangYou Regular" size="50.0" />
                </font>
             </Text>
          </children>
       </HBox>
-      <Button fx:id="doneBtn" layoutX="324.0" layoutY="325.0" mnemonicParsing="false" onAction="#doneBtnAction" prefHeight="29.0" prefWidth="140.0" style="-fx-background-color: #8FC4F0; -fx-border-color: white;" text="Done" />
-      <Button fx:id="cancelBtn" layoutX="169.0" layoutY="325.0" mnemonicParsing="false" onAction="#cancelBtnAction" prefHeight="29.0" prefWidth="140.0" style="-fx-background-color: #8FC4F0; -fx-border-color: white;" text="Cancel" />
+      <Button fx:id="doneBtn" layoutX="324.0" layoutY="325.0" mnemonicParsing="false" onAction="#doneBtnAction" prefHeight="29.0" prefWidth="140.0" style="-fx-background-color: #f0c38e; -fx-border-color: white;" text="Done" />
+      <Button fx:id="cancelBtn" layoutX="169.0" layoutY="325.0" mnemonicParsing="false" onAction="#cancelBtnAction" prefHeight="29.0" prefWidth="140.0" style="-fx-background-color: #f0c38e; -fx-border-color: white;" text="Cancel" />
       <HBox layoutX="29.0" layoutY="67.0" prefHeight="40.0" prefWidth="310.0">
          <children>
-            <Text fill="#f2f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text="Task Name :">
+            <Text fill="#f0c38e" strokeType="OUTSIDE" strokeWidth="0.0" text="Task Name :">
                <font>
                   <Font name="ZCOOL QingKe HuangYou Regular" size="29.0" />
                </font>
@@ -40,7 +40,7 @@
       </HBox>
       <HBox layoutX="343.0" layoutY="67.0" prefHeight="40.0" prefWidth="231.0">
          <children>
-            <Text fill="#f2f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text="Due Date :">
+            <Text fill="#f0c38e" strokeType="OUTSIDE" strokeWidth="0.0" text="Due Date :">
                <font>
                   <Font name="ZCOOL QingKe HuangYou Regular" size="20.0" />
                </font>
@@ -60,7 +60,7 @@
       </HBox>
       <HBox layoutX="27.0" layoutY="107.0" prefHeight="43.0" prefWidth="549.0">
          <children>
-            <Text fill="#f2f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text="Type of Task : ">
+            <Text fill="#f0c38e" strokeType="OUTSIDE" strokeWidth="0.0" text="Type of Task : ">
                <font>
                   <Font name="ZCOOL QingKe HuangYou Regular" size="29.0" />
                </font>
@@ -80,7 +80,7 @@
       </HBox>
       <HBox layoutX="27.0" layoutY="150.0" prefHeight="40.0" prefWidth="139.0">
          <children>
-            <Text fill="#f2f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text="Description :">
+            <Text fill="#f0c38e" strokeType="OUTSIDE" strokeWidth="0.0" text="Description :">
                <font>
                   <Font name="ZCOOL QingKe HuangYou Regular" size="29.0" />
                </font>

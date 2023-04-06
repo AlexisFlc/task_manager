@@ -10,9 +10,9 @@
 
 <AnchorPane id="AnchorPane" prefHeight="606.0" prefWidth="1025.0" styleClass="parent" stylesheets="@ModernStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modernproject.HomeControlSceneUIController">
    <children>
-      <HBox prefHeight="75.0" prefWidth="1029.0">
+      <HBox prefHeight="75.0" prefWidth="1029.0" style="-fx-background-color: #312C51;">
          <children>
-            <Label text="Task Manager" textFill="#1000c7">
+            <Label text="Task Manager" textFill="#f0c38e">
                <font>
                   <Font name="EE-Alturas" size="37.0" />
                </font>
@@ -20,7 +20,7 @@
                   <Insets left="25.0" top="15.0" />
                </HBox.margin>
             </Label>
-            <ImageView fitHeight="35.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <HBox.margin>
                   <Insets left="12.0" top="15.0" />
                </HBox.margin>
@@ -31,21 +31,17 @@
             <String fx:value="container-border" />
          </styleClass>
       </HBox>
-      <VBox layoutX="1013.0" layoutY="75.0" prefHeight="512.0" prefWidth="16.0" scaleShape="false">
+      <VBox layoutX="1013.0" layoutY="75.0" prefHeight="512.0" prefWidth="16.0" scaleShape="false" style="-fx-background-color: #f0c38e;">
          <styleClass>
             <String fx:value="container-border" />
             <String fx:value="sidebar" />
          </styleClass></VBox>
-      <VBox layoutY="75.0" prefHeight="512.0" prefWidth="14.0">
-         <styleClass>
-            <String fx:value="sidebar" />
-            <String fx:value="container-border" />
-         </styleClass></VBox>
-      <HBox alignment="TOP_CENTER" layoutX="14.0" layoutY="75.0" prefHeight="50.0" prefWidth="999.0">
+      <VBox layoutY="75.0" prefHeight="512.0" prefWidth="14.0" style="-fx-background-color: #f0c38e;" styleClass="container-border" />
+      <HBox alignment="TOP_CENTER" layoutX="14.0" layoutY="75.0" prefHeight="50.0" prefWidth="999.0" style="-fx-background-color: #f0c38e;">
          <children>
             <HBox prefHeight="48.0" prefWidth="249.0" styleClass="btns">
                <children>
-                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" visible="false">
                      <image>
                         <Image url="@../images/Home.png" />
                      </image>
@@ -53,7 +49,7 @@
                         <Insets left="25.0" top="13.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Button fx:id="homeButton" mnemonicParsing="false" onAction="#homeButtonAction" prefHeight="48.0" prefWidth="261.0" style="-fx-background-color: transparent;" text="Home" textFill="#1000c7">
+                  <Button fx:id="homeButton" mnemonicParsing="false" onAction="#homeButtonAction" prefHeight="48.0" prefWidth="261.0" style="-fx-background-color: transparent;" text="Home" textFill="#312c51">
                      <font>
                         <Font name="EE-Alturas" size="20.0" />
                      </font>
@@ -62,7 +58,7 @@
             </HBox>
             <HBox layoutX="10.0" layoutY="10.0" prefHeight="48.0" prefWidth="233.0" styleClass="btns">
                <children>
-                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" visible="false">
                      <image>
                         <Image url="@../images/Task.png" />
                      </image>
@@ -70,7 +66,7 @@
                         <Insets left="25.0" top="13.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Button fx:id="taskButton" mnemonicParsing="false" onAction="#taskButtonAction" prefHeight="48.0" prefWidth="227.0" style="-fx-background-color: transparent;" text="Tasks" textFill="#1000c7">
+                  <Button fx:id="taskButton" mnemonicParsing="false" onAction="#taskButtonAction" prefHeight="48.0" prefWidth="227.0" style="-fx-background-color: transparent;" text="Tasks" textFill="#312c51">
                      <font>
                         <Font name="EE-Alturas" size="20.0" />
                      </font>
@@ -89,11 +85,11 @@
             <String fx:value="sidebar" />
             <String fx:value="container-border" />
          </styleClass></HBox>
-      <HBox layoutX="14.0" layoutY="125.0" prefHeight="232.0" prefWidth="498.0">
+      <HBox layoutX="14.0" layoutY="125.0" prefHeight="232.0" prefWidth="498.0" style="-fx-background-color: #48426D;">
          <children>
             <BorderPane prefHeight="232.0" prefWidth="498.0">
                <bottom>
-                  <Label prefHeight="49.0" prefWidth="215.0" text="-Eleanor Roosevelt" textAlignment="CENTER" textFill="#1000c7" wrapText="true" BorderPane.alignment="CENTER">
+                  <Label prefHeight="49.0" prefWidth="215.0" text="-Eleanor Roosevelt" textAlignment="CENTER" textFill="#f0c38e" wrapText="true" BorderPane.alignment="CENTER">
                      <font>
                         <Font name="EE-Alturas" size="12.0" />
                      </font>
@@ -103,7 +99,7 @@
                   </Label>
                </bottom>
                <center>
-                  <Label contentDisplay="TOP" prefHeight="139.0" prefWidth="494.0" text="&quot;It takes as much energy to wish as it does to plan.&quot;" textAlignment="CENTER" textFill="#2100c7" wrapText="true" BorderPane.alignment="CENTER">
+                  <Label contentDisplay="TOP" prefHeight="139.0" prefWidth="494.0" text="&quot;It takes as much energy to wish as it does to plan.&quot;" textAlignment="CENTER" textFill="#f0c38e" wrapText="true" BorderPane.alignment="CENTER">
                      <font>
                         <Font name="EE-Alturas" size="27.0" />
                      </font>
@@ -116,9 +112,9 @@
             <String fx:value="container-gradient" />
          </styleClass>
       </HBox>
-      <HBox fillHeight="false" layoutX="512.0" layoutY="125.0" prefHeight="232.0" prefWidth="501.0" styleClass="container-border">
+      <HBox fillHeight="false" layoutX="512.0" layoutY="125.0" prefHeight="232.0" prefWidth="501.0" style="-fx-background-color: #f0c38e;" styleClass="container-border">
          <children>
-            <HBox prefHeight="232.0" prefWidth="95.0" style="-fx-background-color: #e8e7fe;">
+            <HBox prefHeight="232.0" prefWidth="95.0" style="-fx-background-color: #f0c38e;">
                <children>
                   <ImageView fitHeight="58.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
 
@@ -131,13 +127,13 @@
                   </ImageView>
                </children>
             </HBox>
-            <HBox fillHeight="false" prefHeight="237.0" prefWidth="404.0" styleClass="btns">
+            <HBox fillHeight="false" prefHeight="237.0" prefWidth="404.0" style="-fx-background-color: foc38e;" styleClass="btns">
                <children>
-                  <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="230.0" prefWidth="314.0" styleClass="container-border">
+                  <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="230.0" prefWidth="314.0" style="-fx-background-color: #f0c38e;" styleClass="container-border">
                     <items>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #48426D;">
                            <children>
-                              <Button fx:id="loginButton" layoutY="-5.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="116.0" prefWidth="309.0" style="-fx-background-color: #ada7fc;" text="Log In" textFill="WHITE">
+                              <Button fx:id="loginButton" layoutY="-5.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="116.0" prefWidth="309.0" style="-fx-background-color: #48426D;" text="Log In" textFill="#f0c38e">
                                  <font>
                                     <Font name="EE-Alturas" size="42.0" />
                                  </font>
@@ -146,7 +142,7 @@
                         </AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="124.0" prefWidth="293.0">
                            <children>
-                              <Button fx:id="signupButton" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" onAction="#signupButtonAction" prefHeight="110.0" prefWidth="309.0" style="-fx-background-color: #ada7fc;" text="Sign Up" textFill="WHITE">
+                              <Button fx:id="signupButton" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" onAction="#signupButtonAction" prefHeight="110.0" prefWidth="309.0" style="-fx-background-color: #48426D;" text="Sign Up" textFill="#f0c38e">
                                  <font>
                                     <Font name="EE-Alturas" size="42.0" />
                                  </font>
@@ -157,7 +153,7 @@
                   </SplitPane>
                </children>
             </HBox>
-            <HBox layoutX="11.0" layoutY="11.0" prefHeight="230.0" prefWidth="108.0" style="-fx-background-color: #e8e7fe;">
+            <HBox layoutX="11.0" layoutY="11.0" prefHeight="230.0" prefWidth="108.0" style="-fx-background-color: #f0c38e;">
                <children>
                   <ImageView fitHeight="58.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                      <effect>
@@ -171,13 +167,13 @@
                </children>
             </HBox>
          </children></HBox>
-      <HBox layoutX="14.0" layoutY="357.0" prefHeight="230.0" prefWidth="999.0">
+      <HBox layoutX="14.0" layoutY="357.0" prefHeight="230.0" prefWidth="999.0" style="-fx-background-color: #48426D;">
          <styleClass>
             <String fx:value="container-border" />
             <String fx:value="container-gradient" />
          </styleClass>
          <children>
-            <ImageView fitHeight="260.0" fitWidth="229.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="260.0" fitWidth="229.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../images/studying.gif" />
                </image>
@@ -186,7 +182,7 @@
                <children>
                   <BorderPane prefHeight="229.0" prefWidth="543.0">
                      <top>
-                        <Label prefHeight="31.0" prefWidth="361.0" text="About Task Manager" textFill="#1000c7" BorderPane.alignment="CENTER">
+                        <Label prefHeight="31.0" prefWidth="361.0" text="About Task Manager" textFill="#f0c38e" BorderPane.alignment="CENTER">
                            <font>
                               <Font name="EE-Alturas" size="20.0" />
                            </font>
@@ -196,14 +192,14 @@
                         </Label>
                      </top>
                      <bottom>
-                        <Label prefHeight="11.0" prefWidth="158.0" text="2019© Task Manager" textAlignment="CENTER" textFill="#1000c7" BorderPane.alignment="CENTER">
+                        <Label prefHeight="11.0" prefWidth="158.0" text="2019© Task Manager" textAlignment="CENTER" textFill="#f0c38e" BorderPane.alignment="CENTER">
                            <font>
                               <Font name="EE-Alturas" size="10.0" />
                            </font>
                         </Label>
                      </bottom>
                      <center>
-                        <Label text="Planning and scheduling tasks with ease!" textAlignment="CENTER" textFill="#1000c7" wrapText="true" BorderPane.alignment="CENTER">
+                        <Label text="Planning and scheduling tasks with ease!" textAlignment="CENTER" textFill="#f0c38e" wrapText="true" BorderPane.alignment="CENTER">
                            <font>
                               <Font name="EE-Alturas" size="27.0" />
                            </font>
@@ -215,7 +211,7 @@
                   </BorderPane>
                </children>
             </HBox>
-            <ImageView fitHeight="260.0" fitWidth="229.0" layoutX="11.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="260.0" fitWidth="229.0" layoutX="11.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../images/math.gif" />
                </image>

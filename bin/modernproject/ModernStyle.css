@@ -28,10 +28,10 @@
     -fx-text-fill: white;
 }
 .login-input{
-    -fx-text-fill: #1000c7;
+    -fx-text-fill: #f0c38e;
 }
 .container-border{
-    -fx-border-color:  #1000c7;
+    -fx-border-color:  #312C51;
 }
 .container-gradient{
     -fx-background-color: linear-gradient( #ada7fc, white, #ada7fc);
