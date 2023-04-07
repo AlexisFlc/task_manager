@@ -20,7 +20,7 @@
                   <Insets left="25.0" top="15.0" />
                </HBox.margin>
             </Label>
-            <ImageView fitHeight="35.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <ImageView fitHeight="35.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                <HBox.margin>
                   <Insets left="12.0" top="15.0" />
                </HBox.margin>
@@ -41,7 +41,7 @@
          <children>
             <HBox prefHeight="48.0" prefWidth="249.0" styleClass="btns">
                <children>
-                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/Home.png" />
                      </image>
@@ -49,7 +49,7 @@
                         <Insets left="25.0" top="13.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Button fx:id="homeButton" mnemonicParsing="false" onAction="#homeButtonAction" prefHeight="48.0" prefWidth="261.0" style="-fx-background-color: transparent;" text="Home" textFill="#312c51">
+                  <Button fx:id="homeButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#homeButtonAction" prefHeight="48.0" prefWidth="261.0" style="-fx-background-color: transparent;" text="Home" textFill="#312c51">
                      <font>
                         <Font name="EE-Alturas" size="20.0" />
                      </font>
@@ -58,7 +58,7 @@
             </HBox>
             <HBox layoutX="10.0" layoutY="10.0" prefHeight="48.0" prefWidth="233.0" styleClass="btns">
                <children>
-                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/Task.png" />
                      </image>

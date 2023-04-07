@@ -22,13 +22,14 @@
     -fx-background-color: transparent;
 }
 .btns:hover{
-    -fx-background-color: #dda5f3;
+    -fx-background-color: #B79764;
 }
 .text-input{
     -fx-text-fill: white;
 }
 .login-input{
     -fx-text-fill: #f0c38e;
+    -fx-background-color : transparent;
 }
 .container-border{
     -fx-border-color:  #312C51;

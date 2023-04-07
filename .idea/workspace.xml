@@ -9,18 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bb7d0aa-b7dd-403b-acd9-a49914b481af" name="Default Changelist" comment="Change design and correct number of task in the menu.">
+    <list default="true" id="2bb7d0aa-b7dd-403b-acd9-a49914b481af" name="Default Changelist" comment="Change design">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModernProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ModernProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/modernproject/MysqlConSingleton.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/MysqlConSingleton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/modernproject/TaskSceneUIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/TaskSceneUIController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/ModernStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/ModernStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/HOME.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/HOME.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/PENCIL.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/PENCIL.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/SEARCH.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/SEARCH.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/TASK.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/TASK.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/USER.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/USER.PNG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modernproject/HomeControlSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/HomeControlSceneUI.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modernproject/HomeSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/HomeSceneUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modernproject/LoginSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/LoginSceneUI.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modernproject/ModernStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/ModernStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modernproject/MysqlConSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/MysqlConSingleton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modernproject/SignUpSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/SignUpSceneUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modernproject/TaskInputSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/TaskInputSceneUI.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modernproject/TaskSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/TaskSceneUI.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -289,7 +289,8 @@
     <MESSAGE value="creation de mysqlcon" />
     <MESSAGE value="linked events to database" />
     <MESSAGE value="Hash password" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hash password" />
+    <MESSAGE value="Change design" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change design" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

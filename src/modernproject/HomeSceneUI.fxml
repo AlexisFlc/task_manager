@@ -39,7 +39,7 @@
          <children>
             <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="249.5" styleClass="btns">
                <children>
-                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/Home.png" />
                      </image>
@@ -56,7 +56,7 @@
             </HBox>
             <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="249.5" styleClass="btns">
                <children>
-                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/Task.png" />
                      </image>

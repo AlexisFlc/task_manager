@@ -6,6 +6,7 @@
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="775.0" stylesheets="@ModernStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modernproject.SignUpSceneUIController">
@@ -59,27 +60,32 @@
                   <Font name="Apple SD GothicNeo ExtraBold" size="13.0" />
                </font>
             </TextField>
-            <TextField fx:id="fnText" layoutX="227.0" layoutY="78.0" prefHeight="27.0" prefWidth="325.0" promptText="First Name" styleClass="login-input">
+            <TextField fx:id="fnText" layoutX="227.0" layoutY="78.0" prefHeight="27.0" prefWidth="325.0" promptText="First Name" style="-fx-background-color: transparent;" styleClass="login-input">
                <font>
                   <Font name="Apple SD GothicNeo ExtraBold" size="13.0" />
                </font>
             </TextField>
-            <TextField fx:id="lnText" layoutX="227.0" layoutY="119.0" prefHeight="27.0" prefWidth="325.0" promptText="Last Name" styleClass="login-input">
+            <TextField fx:id="lnText" layoutX="227.0" layoutY="119.0" prefHeight="27.0" prefWidth="325.0" promptText="Last Name" style="-fx-background-color: transparent;" styleClass="login-input">
                <font>
                   <Font name="Apple SD GothicNeo ExtraBold" size="13.0" />
                </font>
             </TextField>
-            <TextField fx:id="userText" layoutX="227.0" layoutY="162.0" prefHeight="27.0" prefWidth="325.0" promptText="Username" styleClass="login-input">
+            <Line endX="227.0" layoutX="325.0" layoutY="105.0" startX="-100.0" />
+            <Line endX="227.0" layoutX="325.0" layoutY="146.0" startX="-100.0" />
+            <Line endX="227.0" layoutX="325.0" layoutY="189.0" startX="-100.0" />
+            <Line endX="227.0" layoutX="325.0" layoutY="231.0" startX="-100.0" />
+            <Line endX="227.0" layoutX="325.0" layoutY="267.0" startX="-100.0" />
+            <TextField fx:id="userText" layoutX="227.0" layoutY="162.0" prefHeight="27.0" prefWidth="325.0" promptText="Username" style="-fx-background-color: transparent;" styleClass="login-input">
                <font>
                   <Font name="Apple SD GothicNeo ExtraBold" size="13.0" />
                </font>
             </TextField>
-            <PasswordField fx:id="passText" layoutX="225.0" layoutY="204.0" prefHeight="27.0" prefWidth="325.0" promptText="Password" styleClass="login-input">
+            <PasswordField fx:id="passText" layoutX="225.0" layoutY="204.0" prefHeight="27.0" prefWidth="325.0" promptText="Password" style="-fx-background-color: transparent;" styleClass="login-input">
                <font>
                   <Font name="Apple SD GothicNeo ExtraBold" size="13.0" />
                </font>
             </PasswordField>
-            <PasswordField fx:id="confirmText" layoutX="225.0" layoutY="240.0" prefHeight="27.0" prefWidth="325.0" promptText="Confirm Password" styleClass="login-input">
+            <PasswordField fx:id="confirmText" layoutX="225.0" layoutY="240.0" prefHeight="27.0" prefWidth="325.0" promptText="Confirm Password" style="-fx-background-color: transparent;" styleClass="login-input">
                <font>
                   <Font name="Apple SD GothicNeo ExtraBold" size="13.0" />
                </font>

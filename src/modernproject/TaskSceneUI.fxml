@@ -21,7 +21,7 @@
                   <Insets left="25.0" top="15.0" />
                </HBox.margin>
             </Label>
-            <ImageView fitHeight="35.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <ImageView fitHeight="35.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Pencil.png" />
                </image>
@@ -43,7 +43,7 @@
          <children>
             <HBox prefHeight="48.0" prefWidth="249.75" styleClass="btns">
                <children>
-                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/Home.png" />
                      </image>
@@ -60,7 +60,7 @@
             </HBox>
             <HBox layoutX="11.0" layoutY="11.0" prefHeight="100.0" prefWidth="249.75" styleClass="btns">
                <children>
-                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/Task.png" />
                      </image>
