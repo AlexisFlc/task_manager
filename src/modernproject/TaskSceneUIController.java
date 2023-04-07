@@ -64,6 +64,9 @@ public class TaskSceneUIController implements Initializable {
         TaskServices o = new TaskServices();
         if(taskName == null || taskName.isEmpty()) {
             taskNameArea.setText("Nothing is Selected");
+            taskDateArea.setText("Nothing is Selected");
+            taskTypeArea.setText("Nothing is Selected");
+            taskDescArea.setText("Nothing is Selected");
         }else {
                 for (Tasks tasks : taskService.getAllTasks()) {
                 String realName = taskName.split("on")[0];
@@ -78,10 +81,10 @@ public class TaskSceneUIController implements Initializable {
             }
             //taskSelectedArea.setText("Task Name: " + t.getTaskName() + "\n" + "Due Date: " + t.getDueDate()
                     //+ "\n" + "Type: " + t.getType() + "\n" + "Description: " + t.getDesc());
-            taskNameArea.setText("Task Name: " + t.getTaskName());
-            taskDateArea.setText("Due Date: " + t.getDueDate());
-            taskTypeArea.setText("Type: " + t.getType());
-            taskDescArea.setText("Description: " + t.getDesc());
+            taskNameArea.setText(t.getTaskName());
+            taskDateArea.setText(t.getDueDate());
+            taskTypeArea.setText(t.getType());
+            taskDescArea.setText(t.getDesc());
         }
     }
     
@@ -128,6 +131,10 @@ public class TaskSceneUIController implements Initializable {
         inputWindow.show();
         inputWindow.setResizable(false);
         inputWindow.setTitle("Task Manager - Input");
+        //refresh taskLL
+
+        ModernProject.taskLL = taskService.getAllNotDone();
+
     }
 
     @FXML private void deleteBtnAction(ActionEvent event) throws IOException, SQLException {
@@ -147,7 +154,7 @@ public class TaskSceneUIController implements Initializable {
            if (t != null)
              o.deleteTask(t.getTaskName());
            else {
-               System.out.println("Task not found");
+               System.out.println("Task not found" + t.getTaskName());
               }
 
             Parent taskParent = FXMLLoader.load(getClass().getResource("TaskSceneUI.fxml"));
@@ -183,6 +190,12 @@ public class TaskSceneUIController implements Initializable {
 
 
             o.updateTask(t, finalTaskName);
+            for(Tasks tasks : ModernProject.taskLL) {
+                if(Objects.equals(tasks.getTaskName(), finalTaskName)) {
+                    tasks.setStatus("Completed");
+                    break;
+                }
+            }
 
             Parent taskParent = FXMLLoader.load(getClass().getResource("TaskSceneUI.fxml"));
             Scene taskScene = new Scene(taskParent);
@@ -191,6 +204,7 @@ public class TaskSceneUIController implements Initializable {
             taskWindow.show();
             taskWindow.setResizable(false);
             taskWindow.setTitle("Task Manager - Task");
+
         }
     }
 
@@ -213,17 +227,27 @@ public class TaskSceneUIController implements Initializable {
                 }
             }
             if (t != null) {
+                System.out.println("le t" + t);
 
                 String[] name = t.transferEditToFile(taskNameArea);
-                t.setTaskName(name[0]);
+                t.setTaskName(taskNameArea.getText());
                 String[] date = t.transferEditToFile(taskDateArea);
-                t.setDueDate(date[0]);
+                t.setDueDate(taskDateArea.getText());
                 String[] type = t.transferEditToFile(taskTypeArea);
-                t.setType(type[0]);
+                t.setType(taskTypeArea.getText());
                 String[] desc = t.transferEditToFile(taskDescArea);
-                t.setDesc(desc[0]);
+                t.setDesc(taskDescArea.getText());
                 System.out.println(t);
                 o.updateTask(t, finalTaskName);
+                for(Tasks tasks : ModernProject.taskLL) {
+                    if(Objects.equals(tasks.getTaskName(), finalTaskName)) {
+                        tasks.setTaskName(t.getTaskName());
+                        tasks.setDueDate(t.getDueDate());
+                        tasks.setType(t.getType());
+                        tasks.setDesc(t.getDesc());
+                        break;
+                    }
+                }
                 /*taskListView.getItems().clear();
                 loadData();*/
             }

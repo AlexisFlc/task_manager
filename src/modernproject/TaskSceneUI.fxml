@@ -102,16 +102,36 @@
                   </HBox>
                   <Button fx:id="addBtn" layoutX="188.5" layoutY="16.5" mnemonicParsing="false" onAction="#addBtnAction" prefHeight="29.0" prefWidth="29.0" style="-fx-background-color: transparent; -fx-border-color: #424874; -fx-border-radius: 300px;" />
                   <ListView fx:id="taskListView" layoutX="17.0" layoutY="49.0" onMouseClicked="#handleMouseClick" prefHeight="272.0" prefWidth="435.0" style="-fx-border-color: #424874;" />
-                  <ScrollPane layoutX="18.0" layoutY="329.0" minHeight="112" prefHeight="120.0" prefWidth="316.0" style="-fx-background-color: black; -fx-border-color: #424874;">
+                  <ScrollPane layoutX="90.0" layoutY="329.0" minHeight="112" prefHeight="120.0" prefWidth="240.0" style="-fx-background-color: black; -fx-border-color: #424874;">
                      <content>
                         <VBox>
-                           <TextArea fx:id="taskNameArea" minHeight="28" prefHeight="15.0" prefWidth="311.0" promptText="Task name" style="-fx-text-fill: blue;" wrapText="true" />
-                           <TextArea fx:id="taskDateArea" minHeight="28" prefHeight="15.0" prefWidth="311.0" promptText="Task due date" style="-fx-text-fill: blue;" wrapText="true" />
-                           <TextArea fx:id="taskTypeArea" minHeight="28" prefHeight="15.0" prefWidth="311.0" promptText="Task type" style="-fx-text-fill: blue;" wrapText="true" />
-                           <TextArea fx:id="taskDescArea" minHeight="28" prefHeight="15.0" prefWidth="311.0" promptText="Task description" style="-fx-text-fill: blue;" wrapText="true" />
+                           <TextArea fx:id="taskNameArea" minHeight="28" prefHeight="15.0" prefWidth="236.0" promptText="Task name" style="-fx-text-fill: #312C51;" wrapText="true" />
+                           <TextArea fx:id="taskDateArea" minHeight="28" prefHeight="15.0" prefWidth="236.0" promptText="Task Date" style="-fx-text-fill: #312C51;" wrapText="true" />
+                           <TextArea fx:id="taskTypeArea" minHeight="28" prefHeight="15.0" prefWidth="236.0" promptText="Task type" style="-fx-text-fill: #312C51;" wrapText="true" />
+                           <TextArea fx:id="taskDescArea" minHeight="28" minWidth="200.0" prefHeight="15.0" prefWidth="100.0" promptText="Task description" style="-fx-text-fill: #312C51;" wrapText="true" />
                         </VBox>
                      </content>
                   </ScrollPane>
+                  <Text fill="#f0c38e" layoutX="15.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :">
+                     <font>
+                        <Font size="13.5" />
+                     </font>
+                  </Text>
+                  <Text fill="#f0c38e" layoutX="15.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Due date :">
+                     <font>
+                        <Font size="13.5" />
+                     </font>
+                  </Text>
+                  <Text fill="#f0c38e" layoutX="15.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type :">
+                     <font>
+                        <Font size="13.5" />
+                     </font>
+                  </Text>
+                  <Text fill="#f0c38e" layoutX="15.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description :">
+                     <font>
+                        <Font size="13.5" />
+                     </font>
+                  </Text>
                   <Button fx:id="updateBtn" layoutX="343.0" layoutY="329.0" mnemonicParsing="false" onAction="#updateBtn" prefHeight="27.0" prefWidth="109.0" style="-fx-background-color: #f0c38e;" text="Update" />
                   <Button fx:id="deleteBtn" layoutX="343.0" layoutY="409.0" mnemonicParsing="false" onAction="#deleteBtnAction" prefHeight="27.0" prefWidth="109.0" style="-fx-background-color: #f0c38e;" text="Delete" />
                   <Button fx:id="completeBtn" layoutX="343.0" layoutY="369.0" mnemonicParsing="false" onAction="#completeBtn" prefHeight="27.0" prefWidth="109.0" style="-fx-background-color: #f0c38e;" text="Complete" />

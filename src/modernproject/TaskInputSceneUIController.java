@@ -52,6 +52,7 @@ public class TaskInputSceneUIController implements Initializable {
 				alert.showAndWait();
 			}else {
 				taskServices.addTask(task);
+				ModernProject.taskLL.add(task);
 				Parent taskParent = FXMLLoader.load(getClass().getResource("TaskSceneUI.fxml"));
 				Scene taskScene = new Scene(taskParent);
 				Stage taskWindow = (Stage) ((Node) event.getSource()).getScene().getWindow();

@@ -85,12 +85,13 @@ public class Tasks implements Comparable<Tasks> {
 
         Scanner scan = new Scanner(editFile);
         String[] edits = new String[4];
+        /*
         int counter = 0;
         while(scan.hasNextLine()) {
             String line = scan.nextLine();
             String[] lineSplit = line.split(": ", 2);
             edits[counter++] = lineSplit[1];
-        }
+        }*/
         scan.close();
         return edits;
     }

@@ -11,17 +11,15 @@
   <component name="ChangeListManager">
     <list default="true" id="2bb7d0aa-b7dd-403b-acd9-a49914b481af" name="Default Changelist" comment="Change design">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/modernproject/ModernStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/ModernStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/HOME.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/HOME.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/PENCIL.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/PENCIL.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/SEARCH.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/SEARCH.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/TASK.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/TASK.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/USER.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/USER.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modernproject/HomeControlSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/HomeControlSceneUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modernproject/HomeSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/HomeSceneUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modernproject/ModernStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/ModernStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modernproject/SignUpSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/SignUpSceneUI.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved-Files-For-Users/test/ScannedEditFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Saved-Files-For-Users/test/ScannedEditFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/TaskInputSceneUIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/TaskInputSceneUIController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/TaskSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/TaskSceneUI.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/TaskSceneUIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/TaskSceneUIController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modernproject/Tasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modernproject/Tasks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/TaskInputSceneUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/TaskInputSceneUIController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modernproject/TaskSceneUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/TaskSceneUI.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/TaskSceneUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/TaskSceneUIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modernproject/Tasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modernproject/Tasks.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +127,8 @@
     &quot;last_opened_file_path&quot;: &quot;V:/INFO-NEV/BUT-INFO-NEV-2-CDV_APP/af303746/Semestre4/SAE/task_manager/mysql-connector-java-8.0.25.jar&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RunManager" selected="Application.ModernProject">
